@@ -87,6 +87,6 @@ cmd += ["-filter_complex_script", f"{S}/graph_{MODE}.txt", "-map", "[vout]", "-m
 if MODE == "preview":
     cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "26", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", f"{S}/out/pratonton_resensi.mp4"]
 else:
-    cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "18", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", f"{S}/out/RESENSI_BUKU_MERZ_final.mp4"]
+    cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", f"{S}/out/RESENSI_BUKU_MERZ_final.mp4"]
 os.makedirs(f"{S}/out", exist_ok=True)
 subprocess.run(cmd, check=True)
