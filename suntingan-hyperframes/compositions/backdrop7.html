@@ -1,0 +1,23 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop7" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd42" class="seg" style="z-index:43"><img id="bd42-img" class="photo" src="assets/bg/kulit.jpg" alt=""></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd42-img", { scale: 1.04 }, { scale: 1.12, duration: 9.44, ease: "none" }, 0.30);
+    tl.set("#bd42", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd42", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    window.__timelines["backdrop7"] = tl;
+  </script>
+</template>

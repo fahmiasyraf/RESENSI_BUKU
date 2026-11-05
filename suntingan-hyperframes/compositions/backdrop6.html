@@ -1,0 +1,61 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop6" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd36" class="seg" style="z-index:37"><div class="mesh" style="background:#0B1D3A"><img id="bd36-b1" class="blob" src="assets/bg/blob-1E4FD8.png" alt="" style="left:-200px;top:-260px"><img id="bd36-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd36-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div><div id="bd36-w" class="bigword">HALA TUJU</div></div>
+    <div id="bd37" class="seg" style="z-index:38"><div class="mesh" style="background:#062A30"><img id="bd37-b1" class="blob" src="assets/bg/blob-0FB5A8.png" alt="" style="left:-200px;top:-260px"><img id="bd37-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd37-b3" class="blob small" src="assets/bg/blob-A7F3D0.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd38" class="seg" style="z-index:39"><div class="mesh" style="background:#3A1600"><img id="bd38-b1" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:-200px;top:-260px"><img id="bd38-b2" class="blob" src="assets/bg/blob-F5C400.png" alt="" style="left:900px;top:240px"><img id="bd38-b3" class="blob small" src="assets/bg/blob-FF4D6D.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd39" class="seg" style="z-index:40"><img id="bd39-img" class="photo" src="assets/bg/pesawat.jpg" alt=""></div>
+    <div id="bd40" class="seg" style="z-index:41"><div class="mesh" style="background:#052E1C"><img id="bd40-b1" class="blob" src="assets/bg/blob-22C55E.png" alt="" style="left:-200px;top:-260px"><img id="bd40-b2" class="blob" src="assets/bg/blob-A3E635.png" alt="" style="left:900px;top:240px"><img id="bd40-b3" class="blob small" src="assets/bg/blob-0EA5E9.png" alt="" style="left:300px;top:520px"></div><div id="bd40-w" class="bigword">MIMPI</div></div>
+    <div id="bd41" class="seg" style="z-index:42"><div class="mesh" style="background:#3A0B16"><img id="bd41-b1" class="blob" src="assets/bg/blob-FF4D6D.png" alt="" style="left:-200px;top:-260px"><img id="bd41-b2" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:900px;top:240px"><img id="bd41-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div><div id="bd41-w" class="bigword">AZAM</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd36-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 7.00, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd36-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 7.00, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd36-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 7.00, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd36-w", { x: -120 }, { x: 120, duration: 7.00, ease: "none" }, 0.30);
+    tl.set("#bd36", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd36", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    tl.fromTo("#bd37-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 7.70, ease: "sine.inOut" }, 6.70);
+    tl.fromTo("#bd37-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 7.70, ease: "sine.inOut" }, 6.70);
+    tl.fromTo("#bd37-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 7.70, ease: "sine.inOut" }, 6.70);
+    tl.set("#bd37", { opacity: 1 }, 6.40);
+    tl.fromTo("#bd37", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 6.40);
+    tl.set("#bd36", { opacity: 0 }, 7.05);
+    tl.fromTo("#bd38-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 5.50, ease: "sine.inOut" }, 13.80);
+    tl.fromTo("#bd38-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 5.50, ease: "sine.inOut" }, 13.80);
+    tl.fromTo("#bd38-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 5.50, ease: "sine.inOut" }, 13.80);
+    tl.set("#bd38", { opacity: 1 }, 13.50);
+    tl.fromTo("#bd38", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 13.50);
+    tl.set("#bd37", { opacity: 0 }, 14.15);
+    tl.fromTo("#bd39-img", { scale: 1.04 }, { scale: 1.12, duration: 5.20, ease: "none" }, 18.70);
+    tl.set("#bd39", { opacity: 1 }, 18.40);
+    tl.fromTo("#bd39", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 18.40);
+    tl.set("#bd38", { opacity: 0 }, 19.05);
+    tl.fromTo("#bd40-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 5.00, ease: "sine.inOut" }, 23.30);
+    tl.fromTo("#bd40-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 5.00, ease: "sine.inOut" }, 23.30);
+    tl.fromTo("#bd40-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 5.00, ease: "sine.inOut" }, 23.30);
+    tl.fromTo("#bd40-w", { x: -120 }, { x: 120, duration: 5.00, ease: "none" }, 23.30);
+    tl.set("#bd40", { opacity: 1 }, 23.00);
+    tl.fromTo("#bd40", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "power3.inOut" }, 23.00);
+    tl.set("#bd39", { opacity: 0 }, 23.65);
+    tl.fromTo("#bd41-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 6.80, ease: "sine.inOut" }, 27.70);
+    tl.fromTo("#bd41-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 6.80, ease: "sine.inOut" }, 27.70);
+    tl.fromTo("#bd41-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 6.80, ease: "sine.inOut" }, 27.70);
+    tl.fromTo("#bd41-w", { x: 120 }, { x: -120, duration: 6.80, ease: "none" }, 27.70);
+    tl.set("#bd41", { opacity: 1 }, 27.40);
+    tl.fromTo("#bd41", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 27.40);
+    tl.set("#bd40", { opacity: 0 }, 28.05);
+    window.__timelines["backdrop6"] = tl;
+  </script>
+</template>

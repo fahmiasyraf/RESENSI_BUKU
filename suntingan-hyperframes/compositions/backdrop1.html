@@ -1,0 +1,58 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop1" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd6" class="seg" style="z-index:7"><img id="bd6-img" class="photo" src="assets/bg/pesawat.jpg" alt=""></div>
+    <div id="bd7" class="seg" style="z-index:8"><div class="mesh" style="background:#0B1D3A"><img id="bd7-b1" class="blob" src="assets/bg/blob-1E4FD8.png" alt="" style="left:-200px;top:-260px"><img id="bd7-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd7-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div><div id="bd7-w" class="bigword">KISAH BENAR</div></div>
+    <div id="bd8" class="seg" style="z-index:9"><div class="mesh" style="background:#062A30"><img id="bd8-b1" class="blob" src="assets/bg/blob-0FB5A8.png" alt="" style="left:-200px;top:-260px"><img id="bd8-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd8-b3" class="blob small" src="assets/bg/blob-A7F3D0.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd9" class="seg" style="z-index:10"><img id="bd9-img" class="photo" src="assets/bg/kampung.jpg" alt=""></div>
+    <div id="bd10" class="seg" style="z-index:11"><div class="mesh" style="background:#3A1600"><img id="bd10-b1" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:-200px;top:-260px"><img id="bd10-b2" class="blob" src="assets/bg/blob-F5C400.png" alt="" style="left:900px;top:240px"><img id="bd10-b3" class="blob small" src="assets/bg/blob-FF4D6D.png" alt="" style="left:300px;top:520px"></div><div id="bd10-w" class="bigword">CABARAN</div></div>
+    <div id="bd11" class="seg" style="z-index:12"><div class="mesh" style="background:#1B0B3A"><img id="bd11-b1" class="blob" src="assets/bg/blob-7C3AED.png" alt="" style="left:-200px;top:-260px"><img id="bd11-b2" class="blob" src="assets/bg/blob-EC4899.png" alt="" style="left:900px;top:240px"><img id="bd11-b3" class="blob small" src="assets/bg/blob-3EC5FF.png" alt="" style="left:300px;top:520px"></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd6-img", { scale: 1.04 }, { scale: 1.12, duration: 7.60, ease: "none" }, 0.30);
+    tl.set("#bd6", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd6", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    tl.fromTo("#bd7-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 6.20, ease: "sine.inOut" }, 7.30);
+    tl.fromTo("#bd7-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 6.20, ease: "sine.inOut" }, 7.30);
+    tl.fromTo("#bd7-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 6.20, ease: "sine.inOut" }, 7.30);
+    tl.fromTo("#bd7-w", { x: 120 }, { x: -120, duration: 6.20, ease: "none" }, 7.30);
+    tl.set("#bd7", { opacity: 1 }, 7.00);
+    tl.fromTo("#bd7", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 7.00);
+    tl.set("#bd6", { opacity: 0 }, 7.65);
+    tl.fromTo("#bd8-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 6.00, ease: "sine.inOut" }, 12.90);
+    tl.fromTo("#bd8-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 6.00, ease: "sine.inOut" }, 12.90);
+    tl.fromTo("#bd8-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 6.00, ease: "sine.inOut" }, 12.90);
+    tl.set("#bd8", { opacity: 1 }, 12.60);
+    tl.fromTo("#bd8", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 12.60);
+    tl.set("#bd7", { opacity: 0 }, 13.25);
+    tl.fromTo("#bd9-img", { scale: 1.04 }, { scale: 1.12, duration: 6.20, ease: "none" }, 18.30);
+    tl.set("#bd9", { opacity: 1 }, 18.00);
+    tl.fromTo("#bd9", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 18.00);
+    tl.set("#bd8", { opacity: 0 }, 18.65);
+    tl.fromTo("#bd10-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 6.60, ease: "sine.inOut" }, 23.90);
+    tl.fromTo("#bd10-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 6.60, ease: "sine.inOut" }, 23.90);
+    tl.fromTo("#bd10-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 6.60, ease: "sine.inOut" }, 23.90);
+    tl.fromTo("#bd10-w", { x: -120 }, { x: 120, duration: 6.60, ease: "none" }, 23.90);
+    tl.set("#bd10", { opacity: 1 }, 23.60);
+    tl.fromTo("#bd10", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "power3.inOut" }, 23.60);
+    tl.set("#bd9", { opacity: 0 }, 24.25);
+    tl.fromTo("#bd11-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 6.60, ease: "sine.inOut" }, 29.90);
+    tl.fromTo("#bd11-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 6.60, ease: "sine.inOut" }, 29.90);
+    tl.fromTo("#bd11-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 6.60, ease: "sine.inOut" }, 29.90);
+    tl.set("#bd11", { opacity: 1 }, 29.60);
+    tl.fromTo("#bd11", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 29.60);
+    tl.set("#bd10", { opacity: 0 }, 30.25);
+    window.__timelines["backdrop1"] = tl;
+  </script>
+</template>

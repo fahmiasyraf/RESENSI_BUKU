@@ -1,0 +1,60 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop4" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd24" class="seg" style="z-index:25"><div class="mesh" style="background:#3A0B16"><img id="bd24-b1" class="blob" src="assets/bg/blob-FF4D6D.png" alt="" style="left:-200px;top:-260px"><img id="bd24-b2" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:900px;top:240px"><img id="bd24-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div><div id="bd24-w" class="bigword">03</div></div>
+    <div id="bd25" class="seg" style="z-index:26"><div class="mesh" style="background:#062A30"><img id="bd25-b1" class="blob" src="assets/bg/blob-0FB5A8.png" alt="" style="left:-200px;top:-260px"><img id="bd25-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd25-b3" class="blob small" src="assets/bg/blob-A7F3D0.png" alt="" style="left:300px;top:520px"></div><div id="bd25-w" class="bigword">PROSES</div></div>
+    <div id="bd26" class="seg" style="z-index:27"><img id="bd26-img" class="photo" src="assets/bg/pesawat.jpg" alt=""></div>
+    <div id="bd27" class="seg" style="z-index:28"><div class="mesh" style="background:#3A1600"><img id="bd27-b1" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:-200px;top:-260px"><img id="bd27-b2" class="blob" src="assets/bg/blob-F5C400.png" alt="" style="left:900px;top:240px"><img id="bd27-b3" class="blob small" src="assets/bg/blob-FF4D6D.png" alt="" style="left:300px;top:520px"></div><div id="bd27-w" class="bigword">PENDIDIKAN</div></div>
+    <div id="bd28" class="seg" style="z-index:29"><img id="bd28-img" class="photo" src="assets/bg/murid.jpg" alt=""></div>
+    <div id="bd29" class="seg" style="z-index:30"><div class="mesh" style="background:#1B0B3A"><img id="bd29-b1" class="blob" src="assets/bg/blob-7C3AED.png" alt="" style="left:-200px;top:-260px"><img id="bd29-b2" class="blob" src="assets/bg/blob-EC4899.png" alt="" style="left:900px;top:240px"><img id="bd29-b3" class="blob small" src="assets/bg/blob-3EC5FF.png" alt="" style="left:300px;top:520px"></div><div id="bd29-w" class="bigword">MASA DEPAN</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd24-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 8.40, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd24-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 8.40, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd24-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 8.40, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd24-w", { x: -120 }, { x: 120, duration: 8.40, ease: "none" }, 0.30);
+    tl.set("#bd24", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd24", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    tl.fromTo("#bd25-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 7.00, ease: "sine.inOut" }, 8.10);
+    tl.fromTo("#bd25-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 7.00, ease: "sine.inOut" }, 8.10);
+    tl.fromTo("#bd25-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 7.00, ease: "sine.inOut" }, 8.10);
+    tl.fromTo("#bd25-w", { x: 120 }, { x: -120, duration: 7.00, ease: "none" }, 8.10);
+    tl.set("#bd25", { opacity: 1 }, 7.80);
+    tl.fromTo("#bd25", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "power3.inOut" }, 7.80);
+    tl.set("#bd24", { opacity: 0 }, 8.45);
+    tl.fromTo("#bd26-img", { scale: 1.04 }, { scale: 1.12, duration: 7.80, ease: "none" }, 14.50);
+    tl.set("#bd26", { opacity: 1 }, 14.20);
+    tl.fromTo("#bd26", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 14.20);
+    tl.set("#bd25", { opacity: 0 }, 14.85);
+    tl.fromTo("#bd27-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 10.00, ease: "sine.inOut" }, 21.70);
+    tl.fromTo("#bd27-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 10.00, ease: "sine.inOut" }, 21.70);
+    tl.fromTo("#bd27-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 10.00, ease: "sine.inOut" }, 21.70);
+    tl.fromTo("#bd27-w", { x: 120 }, { x: -120, duration: 10.00, ease: "none" }, 21.70);
+    tl.set("#bd27", { opacity: 1 }, 21.40);
+    tl.fromTo("#bd27", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 21.40);
+    tl.set("#bd26", { opacity: 0 }, 22.05);
+    tl.fromTo("#bd28-img", { scale: 1.04 }, { scale: 1.12, duration: 13.20, ease: "none" }, 31.10);
+    tl.set("#bd28", { opacity: 1 }, 30.80);
+    tl.fromTo("#bd28", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 30.80);
+    tl.set("#bd27", { opacity: 0 }, 31.45);
+    tl.fromTo("#bd29-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 6.00, ease: "sine.inOut" }, 43.70);
+    tl.fromTo("#bd29-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 6.00, ease: "sine.inOut" }, 43.70);
+    tl.fromTo("#bd29-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 6.00, ease: "sine.inOut" }, 43.70);
+    tl.fromTo("#bd29-w", { x: 120 }, { x: -120, duration: 6.00, ease: "none" }, 43.70);
+    tl.set("#bd29", { opacity: 1 }, 43.40);
+    tl.fromTo("#bd29", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 43.40);
+    tl.set("#bd28", { opacity: 0 }, 44.05);
+    window.__timelines["backdrop4"] = tl;
+  </script>
+</template>

@@ -13,10 +13,17 @@ Projek [HyperFrames](https://hyperframes.heygen.com) (HTML → video) untuk vers
 - `assets/img/broll-{getah,pesawat,kampung,murid}.jpg` — foto stok carian aset HeyGen
   (`npx hyperframes media-use resolve --type image`, log masuk HeyGen diperlukan).
 
+## Dua gaya
+- `gen.py` — gaya korporat: video skrin penuh, kad di kiri.
+- `gen2.py` — gaya sosial (TikTok): video dalam bingkai bersudut bulat yang bertukar posisi (tengah/senget/kanan/skrin penuh),
+  latar bertukar setiap 5–8 s (kecerunan mesh berwarna, perkataan besar bergerak, foto mengikut topik), kapsyen
+  perkataan-demi-perkataan di bawah. Latar dipecah kepada `backdrop0..7` supaya setiap tangkapan render tidak membawa
+  terlalu banyak lapisan berat (elak bingkai hitam). Indeks root kini dijana oleh `gen2.py`.
+
 ## Bina semula
 ```bash
 npm install
-python3 gen.py . --preview     # tanpa --preview untuk versi akhir (tiada tera air)
+python3 gen2.py . --preview    # tanpa --preview untuk versi akhir (tiada tera air)
 npx hyperframes check --json
 npx hyperframes render -q delivery -o renders/akhir.mp4
 ```

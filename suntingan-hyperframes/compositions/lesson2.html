@@ -1,28 +1,28 @@
 <template>
   <style>
-#root { position: absolute; inset: 0; font-family: Inter, sans-serif; color: #FFFFFF; }
-.card { position: absolute; left: 64px; top: 236px; width: 660px; padding: 40px 44px 44px;
-  background: rgba(13,33,66,.9); border-radius: 18px; border-left: 8px solid #F5C400;
-  box-shadow: 0 24px 60px rgba(0,0,0,.45); }
-.kicker { font-weight: 700; font-size: 28px; letter-spacing: .14em; text-transform: uppercase; color: #F5C400; }
-.title { margin-top: 16px; font-weight: 900; font-size: 50px; line-height: 1.1; letter-spacing: -.01em; }
+#root { position: absolute; inset: 0; font-family: Inter, sans-serif; color: #0D2142; }
+.card { position: absolute; left: 64px; top: 236px; width: 620px; padding: 36px 40px 40px; background: #fff;
+  border-radius: 28px; box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+.kicker { display: inline-block; font-weight: 900; font-size: 28px; letter-spacing: .04em; text-transform: uppercase;
+  color: #0D2142; background: #F5C400; border-radius: 999px; padding: 8px 22px; }
+.title { margin-top: 18px; font-weight: 900; font-size: 50px; line-height: 1.08; letter-spacing: -.015em; }
 .w { display: inline-block; margin-right: .24em; }
-.items { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
-.item { display: flex; align-items: center; gap: 16px; font-weight: 700; font-size: 32px;
-  background: rgba(255,255,255,.08); border-radius: 12px; padding: 14px 20px; }
-.dot { width: 14px; height: 14px; border-radius: 50%; background: #F5C400; flex: none; }
-.subrow { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
-.chip { font-weight: 700; font-size: 28px; color: #0D2142; background: #F5C400; border-radius: 999px; padding: 8px 20px; }
-.stat { margin-top: 26px; }
-.stat .num { font-weight: 900; font-size: 96px; line-height: 1; color: #F5C400; font-variant-numeric: tabular-nums; }
-.stat .lbl { margin-top: 6px; font-weight: 700; font-size: 28px; color: #D8E1F0; }
-.steps { margin-top: 28px; display: flex; flex-direction: column; gap: 0; }
-.step { display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 32px; height: 62px; }
-.step .n { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #F5C400; color: #F5C400;
-  display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
-.step.last .n { background: #F5C400; color: #0D2142; }
-
-  </style>
+.items { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+.item { display: flex; align-items: center; gap: 16px; font-weight: 800; font-size: 32px; background: #EEF2F8;
+  border-radius: 16px; padding: 14px 20px; }
+.dot { width: 16px; height: 16px; border-radius: 50%; background: #F5C400; flex: none; }
+.subrow { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+.chip { font-weight: 800; font-size: 28px; color: #fff; background: #0D2142; border-radius: 999px; padding: 8px 20px; }
+.stat { margin-top: 22px; }
+.stat .num { font-weight: 900; font-size: 100px; line-height: 1; color: #0D2142; font-variant-numeric: tabular-nums;
+  background: linear-gradient(transparent 62%, #F5C400 62%); display: inline-block; padding: 0 6px; }
+.stat .lbl { margin-top: 8px; font-weight: 700; font-size: 28px; color: #3B4A66; }
+.steps { margin-top: 24px; display: flex; flex-direction: column; }
+.step { display: flex; align-items: center; gap: 18px; font-weight: 800; font-size: 32px; height: 62px; }
+.step .n { width: 50px; height: 50px; border-radius: 50%; border: 4px solid #F5C400; display: flex; align-items: center;
+  justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+.step.last .n { background: #F5C400; }
+</style>
   <div id="root" data-composition-id="lesson2" data-width="1920" data-height="1080">
     <div id="lesson2-card" class="card">
       <div class="kicker">Pengajaran 2</div>
@@ -40,14 +40,14 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.fromTo("#lesson2-card", { opacity: 0, x: -40, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0);
-    tl.to("#lesson2-card", { opacity: 0, x: -24, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 20.52);
-    tl.fromTo("#lesson2-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.07 }, 0.18);
-    tl.fromTo("#lesson2-i0", { opacity: 0, x: -18, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 8.90);
-    tl.fromTo("#lesson2-i1", { opacity: 0, x: -18, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 10.70);
-    tl.fromTo("#lesson2-s0", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.4)" }, 17.30);
-    tl.fromTo("#lesson2-s1", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.4)" }, 18.30);
-    tl.fromTo("#lesson2-s2", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.4)" }, 19.70);
+    tl.fromTo("#lesson2-card", { opacity: 0, scale: 0.85, rotation: -5.5, y: 30 }, { opacity: 1, scale: 1, rotation: -1.5, y: 0, duration: 0.5, ease: "back.out(1.5)" }, 0);
+    tl.to("#lesson2-card", { opacity: 0, scale: 0.9, y: 20, duration: 0.28, ease: "power3.in" }, 20.56);
+    tl.fromTo("#lesson2-title .w", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.22, ease: "back.out(2)", stagger: 0.06 }, 0.2);
+    tl.fromTo("#lesson2-i0", { opacity: 0, x: -24, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.32, ease: "back.out(1.8)" }, 8.90);
+    tl.fromTo("#lesson2-i1", { opacity: 0, x: -24, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.32, ease: "back.out(1.8)" }, 10.70);
+    tl.fromTo("#lesson2-s0", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 17.30);
+    tl.fromTo("#lesson2-s1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 18.30);
+    tl.fromTo("#lesson2-s2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 19.70);
 
     window.__timelines["lesson2"] = tl;
   </script>

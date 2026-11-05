@@ -1,0 +1,60 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop2" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd12" class="seg" style="z-index:13"><div class="mesh" style="background:#052E1C"><img id="bd12-b1" class="blob" src="assets/bg/blob-22C55E.png" alt="" style="left:-200px;top:-260px"><img id="bd12-b2" class="blob" src="assets/bg/blob-A3E635.png" alt="" style="left:900px;top:240px"><img id="bd12-b3" class="blob small" src="assets/bg/blob-0EA5E9.png" alt="" style="left:300px;top:520px"></div><div id="bd12-w" class="bigword">BERUSAHA</div></div>
+    <div id="bd13" class="seg" style="z-index:14"><div class="mesh" style="background:#0B1D3A"><img id="bd13-b1" class="blob" src="assets/bg/blob-1E4FD8.png" alt="" style="left:-200px;top:-260px"><img id="bd13-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd13-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd14" class="seg" style="z-index:15"><div class="mesh" style="background:#3A1600"><img id="bd14-b1" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:-200px;top:-260px"><img id="bd14-b2" class="blob" src="assets/bg/blob-F5C400.png" alt="" style="left:900px;top:240px"><img id="bd14-b3" class="blob small" src="assets/bg/blob-FF4D6D.png" alt="" style="left:300px;top:520px"></div><div id="bd14-w" class="bigword">26,000</div></div>
+    <div id="bd15" class="seg" style="z-index:16"><div class="mesh" style="background:#062A30"><img id="bd15-b1" class="blob" src="assets/bg/blob-0FB5A8.png" alt="" style="left:-200px;top:-260px"><img id="bd15-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd15-b3" class="blob small" src="assets/bg/blob-A7F3D0.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd16" class="seg" style="z-index:17"><div class="mesh" style="background:#1B0B3A"><img id="bd16-b1" class="blob" src="assets/bg/blob-7C3AED.png" alt="" style="left:-200px;top:-260px"><img id="bd16-b2" class="blob" src="assets/bg/blob-EC4899.png" alt="" style="left:900px;top:240px"><img id="bd16-b3" class="blob small" src="assets/bg/blob-3EC5FF.png" alt="" style="left:300px;top:520px"></div><div id="bd16-w" class="bigword">PILOT</div></div>
+    <div id="bd17" class="seg" style="z-index:18"><video id="bd17-vid" class="clip photo" src="assets/broll/sky-plane.mp4" data-start="34.60" data-duration="9.00" muted playsinline></video></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd12-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 8.20, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd12-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 8.20, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd12-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 8.20, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd12-w", { x: -120 }, { x: 120, duration: 8.20, ease: "none" }, 0.30);
+    tl.set("#bd12", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd12", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    tl.fromTo("#bd13-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 9.00, ease: "sine.inOut" }, 7.90);
+    tl.fromTo("#bd13-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 9.00, ease: "sine.inOut" }, 7.90);
+    tl.fromTo("#bd13-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 9.00, ease: "sine.inOut" }, 7.90);
+    tl.set("#bd13", { opacity: 1 }, 7.60);
+    tl.fromTo("#bd13", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 7.60);
+    tl.set("#bd12", { opacity: 0 }, 8.25);
+    tl.fromTo("#bd14-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 9.00, ease: "sine.inOut" }, 16.30);
+    tl.fromTo("#bd14-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 9.00, ease: "sine.inOut" }, 16.30);
+    tl.fromTo("#bd14-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 9.00, ease: "sine.inOut" }, 16.30);
+    tl.fromTo("#bd14-w", { x: -120 }, { x: 120, duration: 9.00, ease: "none" }, 16.30);
+    tl.set("#bd14", { opacity: 1 }, 16.00);
+    tl.fromTo("#bd14", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 16.00);
+    tl.set("#bd13", { opacity: 0 }, 16.65);
+    tl.fromTo("#bd15-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 5.20, ease: "sine.inOut" }, 24.70);
+    tl.fromTo("#bd15-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 5.20, ease: "sine.inOut" }, 24.70);
+    tl.fromTo("#bd15-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 5.20, ease: "sine.inOut" }, 24.70);
+    tl.set("#bd15", { opacity: 1 }, 24.40);
+    tl.fromTo("#bd15", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "power3.inOut" }, 24.40);
+    tl.set("#bd14", { opacity: 0 }, 25.05);
+    tl.fromTo("#bd16-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 6.20, ease: "sine.inOut" }, 29.30);
+    tl.fromTo("#bd16-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 6.20, ease: "sine.inOut" }, 29.30);
+    tl.fromTo("#bd16-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 6.20, ease: "sine.inOut" }, 29.30);
+    tl.fromTo("#bd16-w", { x: -120 }, { x: 120, duration: 6.20, ease: "none" }, 29.30);
+    tl.set("#bd16", { opacity: 1 }, 29.00);
+    tl.fromTo("#bd16", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 29.00);
+    tl.set("#bd15", { opacity: 0 }, 29.65);
+    tl.set("#bd17", { opacity: 1 }, 34.60);
+    tl.fromTo("#bd17", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 34.60);
+    tl.set("#bd16", { opacity: 0 }, 35.25);
+    window.__timelines["backdrop2"] = tl;
+  </script>
+</template>

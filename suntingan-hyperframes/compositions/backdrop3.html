@@ -1,0 +1,63 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; overflow: hidden; }
+.seg { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mesh { position: absolute; inset: 0; }
+.blob { position: absolute; width: 1300px; height: 1300px; opacity: .9; }
+.blob.small { width: 900px; height: 900px; opacity: .7; }
+.photo { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.bigword { position: absolute; left: -200px; right: -200px; top: 340px; text-align: center; white-space: nowrap;
+  font-family: Inter, sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 4px rgba(255,255,255,.28); }
+</style>
+  <div id="root" data-composition-id="backdrop3" data-width="1920" data-height="1080" data-layout-ignore>
+    <div id="bd18" class="seg" style="z-index:19"><div class="mesh" style="background:#0B1D3A"><img id="bd18-b1" class="blob" src="assets/bg/blob-1E4FD8.png" alt="" style="left:-200px;top:-260px"><img id="bd18-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd18-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd19" class="seg" style="z-index:20"><div class="mesh" style="background:#062A30"><img id="bd19-b1" class="blob" src="assets/bg/blob-0FB5A8.png" alt="" style="left:-200px;top:-260px"><img id="bd19-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd19-b3" class="blob small" src="assets/bg/blob-A7F3D0.png" alt="" style="left:300px;top:520px"></div><div id="bd19-w" class="bigword">01</div></div>
+    <div id="bd20" class="seg" style="z-index:21"><div class="mesh" style="background:#3A1600"><img id="bd20-b1" class="blob" src="assets/bg/blob-FF8A00.png" alt="" style="left:-200px;top:-260px"><img id="bd20-b2" class="blob" src="assets/bg/blob-F5C400.png" alt="" style="left:900px;top:240px"><img id="bd20-b3" class="blob small" src="assets/bg/blob-FF4D6D.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd21" class="seg" style="z-index:22"><div class="mesh" style="background:#1B0B3A"><img id="bd21-b1" class="blob" src="assets/bg/blob-7C3AED.png" alt="" style="left:-200px;top:-260px"><img id="bd21-b2" class="blob" src="assets/bg/blob-EC4899.png" alt="" style="left:900px;top:240px"><img id="bd21-b3" class="blob small" src="assets/bg/blob-3EC5FF.png" alt="" style="left:300px;top:520px"></div><div id="bd21-w" class="bigword">02</div></div>
+    <div id="bd22" class="seg" style="z-index:23"><div class="mesh" style="background:#0B1D3A"><img id="bd22-b1" class="blob" src="assets/bg/blob-1E4FD8.png" alt="" style="left:-200px;top:-260px"><img id="bd22-b2" class="blob" src="assets/bg/blob-3EC5FF.png" alt="" style="left:900px;top:240px"><img id="bd22-b3" class="blob small" src="assets/bg/blob-F5C400.png" alt="" style="left:300px;top:520px"></div></div>
+    <div id="bd23" class="seg" style="z-index:24"><div class="mesh" style="background:#052E1C"><img id="bd23-b1" class="blob" src="assets/bg/blob-22C55E.png" alt="" style="left:-200px;top:-260px"><img id="bd23-b2" class="blob" src="assets/bg/blob-A3E635.png" alt="" style="left:900px;top:240px"><img id="bd23-b3" class="blob small" src="assets/bg/blob-0EA5E9.png" alt="" style="left:300px;top:520px"></div><div id="bd23-w" class="bigword">DISIPLIN</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bd18-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 5.00, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd18-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 5.00, ease: "sine.inOut" }, 0.30);
+    tl.fromTo("#bd18-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 5.00, ease: "sine.inOut" }, 0.30);
+    tl.set("#bd18", { opacity: 1 }, 0.00);
+    tl.fromTo("#bd18", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 0.00);
+    tl.fromTo("#bd19-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 8.40, ease: "sine.inOut" }, 4.70);
+    tl.fromTo("#bd19-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 8.40, ease: "sine.inOut" }, 4.70);
+    tl.fromTo("#bd19-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 8.40, ease: "sine.inOut" }, 4.70);
+    tl.fromTo("#bd19-w", { x: 120 }, { x: -120, duration: 8.40, ease: "none" }, 4.70);
+    tl.set("#bd19", { opacity: 1 }, 4.40);
+    tl.fromTo("#bd19", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.inOut" }, 4.40);
+    tl.set("#bd18", { opacity: 0 }, 5.05);
+    tl.fromTo("#bd20-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 8.50, ease: "sine.inOut" }, 12.50);
+    tl.fromTo("#bd20-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 8.50, ease: "sine.inOut" }, 12.50);
+    tl.fromTo("#bd20-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 8.50, ease: "sine.inOut" }, 12.50);
+    tl.set("#bd20", { opacity: 1 }, 12.20);
+    tl.fromTo("#bd20", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "power3.inOut" }, 12.20);
+    tl.set("#bd19", { opacity: 0 }, 12.85);
+    tl.fromTo("#bd21-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 8.70, ease: "sine.inOut" }, 20.40);
+    tl.fromTo("#bd21-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 8.70, ease: "sine.inOut" }, 20.40);
+    tl.fromTo("#bd21-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 8.70, ease: "sine.inOut" }, 20.40);
+    tl.fromTo("#bd21-w", { x: 120 }, { x: -120, duration: 8.70, ease: "none" }, 20.40);
+    tl.set("#bd21", { opacity: 1 }, 20.10);
+    tl.fromTo("#bd21", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.inOut" }, 20.10);
+    tl.set("#bd20", { opacity: 0 }, 20.75);
+    tl.fromTo("#bd22-b1", { x: 0, y: 0 }, { x: -260, y: 160, duration: 7.60, ease: "sine.inOut" }, 28.50);
+    tl.fromTo("#bd22-b2", { x: 0, y: 0 }, { x: 300, y: -180, duration: 7.60, ease: "sine.inOut" }, 28.50);
+    tl.fromTo("#bd22-b3", { x: 0, y: 0 }, { x: -420, y: -120, duration: 7.60, ease: "sine.inOut" }, 28.50);
+    tl.set("#bd22", { opacity: 1 }, 28.20);
+    tl.fromTo("#bd22", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 0.55, ease: "power3.inOut" }, 28.20);
+    tl.set("#bd21", { opacity: 0 }, 28.85);
+    tl.fromTo("#bd23-b1", { x: 0, y: 0 }, { x: 260, y: 160, duration: 8.80, ease: "sine.inOut" }, 35.50);
+    tl.fromTo("#bd23-b2", { x: 0, y: 0 }, { x: -300, y: -180, duration: 8.80, ease: "sine.inOut" }, 35.50);
+    tl.fromTo("#bd23-b3", { x: 0, y: 0 }, { x: 420, y: -120, duration: 8.80, ease: "sine.inOut" }, 35.50);
+    tl.fromTo("#bd23-w", { x: 120 }, { x: -120, duration: 8.80, ease: "none" }, 35.50);
+    tl.set("#bd23", { opacity: 1 }, 35.20);
+    tl.fromTo("#bd23", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.55, ease: "power3.inOut" }, 35.20);
+    tl.set("#bd22", { opacity: 0 }, 35.85);
+    window.__timelines["backdrop3"] = tl;
+  </script>
+</template>

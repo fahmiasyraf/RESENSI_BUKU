@@ -7,3 +7,4 @@ node_modules/
 renders/
 .hyperframes/
 review/
+assets/bg/*.jpg
