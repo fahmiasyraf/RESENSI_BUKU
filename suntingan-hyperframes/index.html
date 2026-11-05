@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
@@ -25,14 +25,17 @@
       <img id="logo-bug" class="clip" src="assets/img/logo-jnnt.png" alt="Logo Kementerian Pendidikan, Jemaah Nazir Negeri Terengganu"
         data-start="3.0" data-duration="280.04" data-track-index="2">
       <div id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html" data-start="0" data-duration="3.0" data-track-index="10" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:20"></div>
-      <div id="lt" data-composition-id="lt" data-composition-src="compositions/lt-stack-bars.html" data-start="7.0" data-duration="7.4" data-track-index="11" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
+      <div id="lt" data-composition-id="lt" data-composition-src="compositions/lt.html" data-start="7.0" data-duration="7.4" data-track-index="11" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="booksplit" data-composition-id="booksplit" data-composition-src="compositions/booksplit.html" data-start="18.4" data-duration="7.85" data-track-index="12" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:6"></div>
+      <div id="br-getah" data-composition-id="br-getah" data-composition-src="compositions/br-getah.html" data-start="29.6" data-duration="6.0" data-track-index="13" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="br-pesawat" data-composition-id="br-pesawat" data-composition-src="compositions/br-pesawat.html" data-start="36.4" data-duration="7.0" data-track-index="14" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
+      <div id="br-kampung" data-composition-id="br-kampung" data-composition-src="compositions/br-kampung.html" data-start="54.4" data-duration="5.6" data-track-index="15" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="jobs" data-composition-id="jobs" data-composition-src="compositions/jobs.html" data-start="79.6" data-duration="16.8" data-track-index="16" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="br-pesawat2" data-composition-id="br-pesawat2" data-composition-src="compositions/br-pesawat2.html" data-start="106.6" data-duration="8.2" data-track-index="17" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="lesson1" data-composition-id="lesson1" data-composition-src="compositions/lesson1.html" data-start="119.2" data-duration="15.7" data-track-index="18" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="lesson2" data-composition-id="lesson2" data-composition-src="compositions/lesson2.html" data-start="136.2" data-duration="20.9" data-track-index="19" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="lesson3" data-composition-id="lesson3" data-composition-src="compositions/lesson3.html" data-start="158.2" data-duration="21.4" data-track-index="20" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
+      <div id="br-murid" data-composition-id="br-murid" data-composition-src="compositions/br-murid.html" data-start="189.0" data-duration="12.6" data-track-index="21" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="future" data-composition-id="future" data-composition-src="compositions/future.html" data-start="202.6" data-duration="10.8" data-track-index="22" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="quote" data-composition-id="quote" data-composition-src="compositions/quote.html" data-start="240.6" data-duration="13.5" data-track-index="23" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="values" data-composition-id="values" data-composition-src="compositions/values.html" data-start="263.6" data-duration="10.6" data-track-index="24" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
@@ -43,11 +46,14 @@
         data-fade-out="2.5" data-track-index="51" data-automation="{&quot;version&quot;: 1, &quot;lanes&quot;: [{&quot;target&quot;: &quot;volume&quot;, &quot;points&quot;: [{&quot;t&quot;: 0, &quot;v&quot;: 0.5}, {&quot;t&quot;: 2.4, &quot;v&quot;: 0.5}, {&quot;t&quot;: 3.4, &quot;v&quot;: 0.14}, {&quot;t&quot;: 282.64000000000004, &quot;v&quot;: 0.14}, {&quot;t&quot;: 283.34000000000003, &quot;v&quot;: 0.5}, {&quot;t&quot;: 287.04, &quot;v&quot;: 0.5}]}]}"></audio>
       <audio id="sfx-open" class="clip" src="assets/sfx/whoosh-cinematic.mp3" data-start="0.43" data-duration="5.544" data-volume="0.25" data-playback-rate="1.0" data-track-index="60"></audio>
       <audio id="sfx-booksplit" class="clip" src="assets/sfx/whoosh.mp3" data-start="18.421" data-duration="0.575" data-volume="0.3" data-playback-rate="1.0" data-track-index="61"></audio>
-      <audio id="sfx-br-pesawat" class="clip" src="assets/sfx/whoosh.mp3" data-start="36.399" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="62"></audio>
-      <audio id="sfx-br-pesawat2" class="clip" src="assets/sfx/whoosh.mp3" data-start="106.638" data-duration="0.513" data-volume="0.3" data-playback-rate="1.12" data-track-index="60"></audio>
-      <audio id="sfx-lesson1" class="clip" src="assets/sfx/whoosh.mp3" data-start="119.221" data-duration="0.575" data-volume="0.3" data-playback-rate="1.0" data-track-index="61"></audio>
-      <audio id="sfx-lesson2" class="clip" src="assets/sfx/whoosh.mp3" data-start="136.199" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="62"></audio>
-      <audio id="sfx-lesson3" class="clip" src="assets/sfx/whoosh.mp3" data-start="158.238" data-duration="0.513" data-volume="0.3" data-playback-rate="1.12" data-track-index="60"></audio>
+      <audio id="sfx-br-getah" class="clip" src="assets/sfx/whoosh.mp3" data-start="29.599" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="62"></audio>
+      <audio id="sfx-br-pesawat" class="clip" src="assets/sfx/whoosh.mp3" data-start="36.438" data-duration="0.513" data-volume="0.3" data-playback-rate="1.12" data-track-index="60"></audio>
+      <audio id="sfx-br-kampung" class="clip" src="assets/sfx/whoosh.mp3" data-start="54.421" data-duration="0.575" data-volume="0.3" data-playback-rate="1.0" data-track-index="61"></audio>
+      <audio id="sfx-br-pesawat2" class="clip" src="assets/sfx/whoosh.mp3" data-start="106.599" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="62"></audio>
+      <audio id="sfx-lesson1" class="clip" src="assets/sfx/whoosh.mp3" data-start="119.238" data-duration="0.513" data-volume="0.3" data-playback-rate="1.12" data-track-index="60"></audio>
+      <audio id="sfx-lesson2" class="clip" src="assets/sfx/whoosh.mp3" data-start="136.221" data-duration="0.575" data-volume="0.3" data-playback-rate="1.0" data-track-index="61"></audio>
+      <audio id="sfx-lesson3" class="clip" src="assets/sfx/whoosh.mp3" data-start="158.199" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="62"></audio>
+      <audio id="sfx-br-murid" class="clip" src="assets/sfx/whoosh.mp3" data-start="189.038" data-duration="0.513" data-volume="0.3" data-playback-rate="1.12" data-track-index="60"></audio>
       <audio id="sfx-quote" class="clip" src="assets/sfx/whoosh.mp3" data-start="240.621" data-duration="0.575" data-volume="0.3" data-playback-rate="1.0" data-track-index="61"></audio>
       <audio id="sfx-stat" class="clip" src="assets/sfx/pop.mp3" data-start="89.563" data-duration="0.72" data-volume="0.3" data-playback-rate="1.0" data-track-index="62"></audio>
       <audio id="sfx-end" class="clip" src="assets/sfx/whoosh.mp3" data-start="282.889" data-duration="0.653" data-volume="0.3" data-playback-rate="0.88" data-track-index="60"></audio>

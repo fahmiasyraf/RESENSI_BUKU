@@ -8,6 +8,10 @@ Projek [HyperFrames](https://hyperframes.heygen.com) (HTML → video) untuk vers
 - `assets/footage/review_graded.mp4` — rakaman asal yang telah dibetulkan cahayanya
   (cahaya isian setempat + sorotan tingkap direndahkan; lihat `../suntingan/grade.txt`), crop 1920×1080, keyframe setiap 1 s.
 - `assets/audio/voice.wav` — suara dibersihkan (highpass 80 Hz, denoise, EQ 3 kHz, kompresor, −16 LUFS).
+- `assets/audio/music.m4a` — muzik katalog HeyGen (track `17babe5317f24345b808eaf6f2b53e02`, "uplifting inspiring acoustic
+  corporate, light piano and soft strings"), disambung 11× dengan crossfade 2.5 s, −16 LUFS.
+- `assets/img/broll-{getah,pesawat,kampung,murid}.jpg` — foto stok carian aset HeyGen
+  (`npx hyperframes media-use resolve --type image`, log masuk HeyGen diperlukan).
 
 ## Bina semula
 ```bash

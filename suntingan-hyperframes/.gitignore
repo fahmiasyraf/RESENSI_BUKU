@@ -1,0 +1,9 @@
+# Large or licensed media kept out of the repo (see README)
+assets/footage/
+assets/audio/
+assets/img/broll-*.jpg
+.media/
+node_modules/
+renders/
+.hyperframes/
+review/

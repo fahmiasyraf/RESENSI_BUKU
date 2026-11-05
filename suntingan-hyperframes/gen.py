@@ -46,11 +46,11 @@ def cam_xy(state, clamp=True):
 # ---------------- overlays (raw times from the transcript) ----------------
 # kind card: kicker, title, items [(raw t, text)], optional sub [(raw t, text)]
 SCENES = [
-  dict(id="lt", src="compositions/lt-stack-bars.html", start=4.0, dur=7.4),
+  dict(id="lt", start=4.0, dur=7.4),
   dict(id="booksplit", kind="split", start=15.4, dur=7.85),
   dict(id="br-getah", kind="broll", start=26.6, dur=6.0, media="img", src="assets/img/broll-getah.jpg",
        caption="Anak penoreh getah", sfx=True),
-  dict(id="br-pesawat", kind="broll", start=33.4, dur=7.0, media="video", src="assets/broll/sky-plane.mp4",
+  dict(id="br-pesawat", kind="broll", start=33.4, dur=7.0, media="img", src="assets/img/broll-pesawat.jpg",
        caption="Juruterbang · pesawat ke seluruh dunia", sfx=True),
   dict(id="br-kampung", kind="broll", start=51.4, dur=5.6, media="img", src="assets/img/broll-kampung.jpg",
        caption="Membesar sebagai anak kampung", sfx=True),
@@ -298,7 +298,7 @@ hosts = [f'      <div id="intro" data-composition-id="intro" data-composition-sr
 for i, s in enumerate(SCENES):
     if s.get("kind") == "broll" and not os.path.exists(f"{P}/{s['src']}"):
         print("skip (no media yet):", s["id"]); continue
-    src = s.get("src") if s["id"] == "lt" else f"compositions/{s['id']}.html"
+    src = f"compositions/{s['id']}.html"
     hosts.append(f'      <div id="{s["id"]}" data-composition-id="{s["id"]}" data-composition-src="{src}" '
                  f'data-start="{A(s["start"])}" data-duration="{s["dur"]}" data-track-index="{11 + i}" data-track-kind="graphics" '
                  f'data-width="1920" data-height="1080" style="z-index:{5 + (1 if s.get("kind") == "split" else 0)}"></div>')
@@ -345,7 +345,7 @@ index = f"""<!doctype html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>
     <style>
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
       html, body {{ margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }}
@@ -383,13 +383,24 @@ index = f"""<!doctype html>
 """
 write("index.html", index)
 
-# lower third: brand the registry block (name/role, colours, Inter) and hold it for the slot
-lt = open(f"{P}/compositions/lt-stack-bars.html").read()
-for a, b in [("Maya Chen", NAME), ("Host · Neuroscientist", ROLE), ("#141518", NAVY), ("#ffd23f", GOLD),
-             ('"Archivo Black", sans-serif', "Inter, sans-serif"), ('"Space Mono", monospace', "Inter, sans-serif"),
-             ("font-size: 52px;\n        font-weight: 400;", "font-size: 50px;\n        font-weight: 900;"),
-             ('data-duration="4.8"', 'data-duration="7.4"'), ("}, 4.25);", "}, 6.85);"), ("}, 4.32);", "}, 6.92);"),
-             ("}, 4.75);", "}, 7.35);"), ("letter-spacing: 0.06em;", "letter-spacing: 0.04em;"), ("font-size: 23px;", "font-size: 28px;"), ("gsap@3.14.2", "gsap@3.15.0")]:
-    lt = lt.replace(a, b)
-write("compositions/lt-stack-bars.html", lt)
+# lower third: the registry's lt-stack-bars design (name bar wipes from the left, role bar from the right),
+# rebuilt as a <template> scene so it shares the root's GSAP instead of fetching its own copy
+LT_CSS = f"""
+#lt-box {{ position: absolute; left: 120px; bottom: 116px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }}
+#lt-namebar {{ background: {NAVY}; padding: 14px 30px; }}
+#lt-name {{ font-weight: 900; font-size: 50px; color: {INK}; line-height: 1; letter-spacing: -.015em; text-transform: uppercase; white-space: nowrap; }}
+#lt-rolebar {{ background: {GOLD}; padding: 9px 22px; margin-left: 14px; }}
+#lt-role {{ font-weight: 700; font-size: 28px; color: {NAVY}; line-height: 1; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }}
+"""
+LT_BODY = f"""    <div id="lt-box">
+      <div id="lt-namebar"><div id="lt-name">{html.escape(NAME)}</div></div>
+      <div id="lt-rolebar"><div id="lt-role">{html.escape(ROLE)}</div></div>
+    </div>"""
+LT_JS = """    tl.fromTo("#lt-namebar", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power4.out" }, 0.1);
+    tl.fromTo("#lt-rolebar", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0% 0 0%)", duration: 0.5, ease: "power4.out" }, 0.34);
+    tl.to("#lt-rolebar", { clipPath: "inset(0 0 0 100%)", duration: 0.32, ease: "power3.in" }, 6.85);
+    tl.to("#lt-namebar", { clipPath: "inset(0 100% 0 0)", duration: 0.36, ease: "power3.in" }, 6.92);
+"""
+write("compositions/lt.html", scene_file("lt", LT_BODY, LT_CSS, LT_JS))
+if os.path.exists(f"{P}/compositions/lt-stack-bars.html"): os.remove(f"{P}/compositions/lt-stack-bars.html")
 print("ok", TOTAL, "book zooms:", BOOK_ZOOMS)
