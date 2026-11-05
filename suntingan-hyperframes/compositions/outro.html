@@ -1,0 +1,57 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: Inter, sans-serif; color: #FFFFFF; }
+.card { position: absolute; left: 64px; top: 236px; width: 660px; padding: 40px 44px 44px;
+  background: rgba(13,33,66,.9); border-radius: 18px; border-left: 8px solid #F5C400;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.kicker { font-weight: 700; font-size: 28px; letter-spacing: .14em; text-transform: uppercase; color: #F5C400; }
+.title { margin-top: 16px; font-weight: 900; font-size: 50px; line-height: 1.1; letter-spacing: -.01em; }
+.w { display: inline-block; margin-right: .24em; }
+.items { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
+.item { display: flex; align-items: center; gap: 16px; font-weight: 700; font-size: 32px;
+  background: rgba(255,255,255,.08); border-radius: 12px; padding: 14px 20px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; background: #F5C400; flex: none; }
+.subrow { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.chip { font-weight: 700; font-size: 28px; color: #0D2142; background: #F5C400; border-radius: 999px; padding: 8px 20px; }
+.stat { margin-top: 26px; }
+.stat .num { font-weight: 900; font-size: 96px; line-height: 1; color: #F5C400; font-variant-numeric: tabular-nums; }
+.stat .lbl { margin-top: 6px; font-weight: 700; font-size: 28px; color: #D8E1F0; }
+.steps { margin-top: 28px; display: flex; flex-direction: column; gap: 0; }
+.step { display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 32px; height: 62px; }
+.step .n { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #F5C400; color: #F5C400;
+  display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+.step.last .n { background: #F5C400; color: #0D2142; }
+
+#outro-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #0D2142 0%, #183A6E 100%); }
+#outro-cover { position: absolute; left: 230px; top: 190px; height: 700px; box-shadow: 0 30px 70px rgba(0,0,0,.55); border-radius: 6px; }
+#outro-txt { position: absolute; left: 860px; top: 330px; width: 960px; }
+#outro-k { font-weight: 700; font-size: 32px; letter-spacing: .14em; color: #F5C400; text-transform: uppercase; }
+#outro-rule { width: 96px; height: 7px; background: #F5C400; margin: 26px 0 34px; }
+.outro-l { font-weight: 900; font-size: 84px; line-height: 1.08; }
+.outro-l.big { font-size: 108px; }
+#outro-sub { margin-top: 30px; font-size: 34px; color: #D8E1F0; line-height: 1.45; }
+#outro-logo { position: absolute; right: 48px; top: 40px; height: 140px; padding: 14px 20px; background: #fff; border-radius: 16px; }
+
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1920" data-height="1080">
+    <div id="outro-bg"></div>
+    <img id="outro-logo" src="assets/img/logo-jnnt.png" alt="Logo Jemaah Nazir Negeri Terengganu">
+    <img id="outro-cover" src="assets/img/kulit-buku.jpg" alt="Kulit buku">
+    <div id="outro-txt">
+      <div id="outro-k">Ulasan buku</div>
+      <div id="outro-rule"></div>
+        <div id="outro-l0" class="outro-l">Terima kasih</div>
+      <div id="outro-sub">MOHD FAHMI ASYRAF BIN MOHD NOR AZMI<br>Nazir Sekolah<br>Jemaah Nazir Negeri Terengganu</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#outro-cover", { opacity: 0, y: 50, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "expo.out" }, 0.1);
+    tl.fromTo("#outro-k", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.35);
+    tl.fromTo("#outro-rule", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.45);
+    tl.fromTo(".outro-l", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out", stagger: 0.12 }, 0.6);
+    tl.fromTo("#outro-sub", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.55);
+
+    window.__timelines["outro"] = tl;
+  </script>
+</template>

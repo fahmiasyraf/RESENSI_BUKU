@@ -1,0 +1,50 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: Inter, sans-serif; color: #FFFFFF; }
+.card { position: absolute; left: 64px; top: 236px; width: 660px; padding: 40px 44px 44px;
+  background: rgba(13,33,66,.9); border-radius: 18px; border-left: 8px solid #F5C400;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.kicker { font-weight: 700; font-size: 28px; letter-spacing: .14em; text-transform: uppercase; color: #F5C400; }
+.title { margin-top: 16px; font-weight: 900; font-size: 50px; line-height: 1.1; letter-spacing: -.01em; }
+.w { display: inline-block; margin-right: .24em; }
+.items { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
+.item { display: flex; align-items: center; gap: 16px; font-weight: 700; font-size: 32px;
+  background: rgba(255,255,255,.08); border-radius: 12px; padding: 14px 20px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; background: #F5C400; flex: none; }
+.subrow { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.chip { font-weight: 700; font-size: 28px; color: #0D2142; background: #F5C400; border-radius: 999px; padding: 8px 20px; }
+.stat { margin-top: 26px; }
+.stat .num { font-weight: 900; font-size: 96px; line-height: 1; color: #F5C400; font-variant-numeric: tabular-nums; }
+.stat .lbl { margin-top: 6px; font-weight: 700; font-size: 28px; color: #D8E1F0; }
+.steps { margin-top: 28px; display: flex; flex-direction: column; gap: 0; }
+.step { display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 32px; height: 62px; }
+.step .n { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #F5C400; color: #F5C400;
+  display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+.step.last .n { background: #F5C400; color: #0D2142; }
+
+  </style>
+  <div id="root" data-composition-id="lesson3" data-width="1920" data-height="1080">
+    <div id="lesson3-card" class="card">
+      <div class="kicker">Pengajaran 3</div>
+      <div id="lesson3-title" class="title"><span class="w">Kejayaan</span><span class="w">ialah</span><span class="w">satu</span><span class="w">proses,</span><span class="w">bukan</span><span class="w">datang</span><span class="w">tiba-tiba</span></div>
+      <div class="steps">
+        <div id="lesson3-st0" class="step"><span class="n">1</span>Anak kampung</div>
+        <div id="lesson3-st1" class="step"><span class="n">2</span>Pekerja biasa</div>
+        <div id="lesson3-st2" class="step"><span class="n">3</span>Pegawai polis</div>
+        <div id="lesson3-st3" class="step last"><span class="n">4</span>Juruterbang</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#lesson3-card", { opacity: 0, x: -40, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0);
+    tl.to("#lesson3-card", { opacity: 0, x: -24, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 21.02);
+    tl.fromTo("#lesson3-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.07 }, 0.18);
+    tl.fromTo("#lesson3-st0", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 9.10);
+    tl.fromTo("#lesson3-st1", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 10.50);
+    tl.fromTo("#lesson3-st2", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 12.00);
+    tl.fromTo("#lesson3-st3", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out" }, 14.40);
+
+    window.__timelines["lesson3"] = tl;
+  </script>
+</template>

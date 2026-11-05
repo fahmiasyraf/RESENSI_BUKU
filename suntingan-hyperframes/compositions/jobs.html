@@ -1,0 +1,54 @@
+<template>
+  <style>
+#root { position: absolute; inset: 0; font-family: Inter, sans-serif; color: #FFFFFF; }
+.card { position: absolute; left: 64px; top: 236px; width: 660px; padding: 40px 44px 44px;
+  background: rgba(13,33,66,.9); border-radius: 18px; border-left: 8px solid #F5C400;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.kicker { font-weight: 700; font-size: 28px; letter-spacing: .14em; text-transform: uppercase; color: #F5C400; }
+.title { margin-top: 16px; font-weight: 900; font-size: 50px; line-height: 1.1; letter-spacing: -.01em; }
+.w { display: inline-block; margin-right: .24em; }
+.items { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
+.item { display: flex; align-items: center; gap: 16px; font-weight: 700; font-size: 32px;
+  background: rgba(255,255,255,.08); border-radius: 12px; padding: 14px 20px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; background: #F5C400; flex: none; }
+.subrow { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.chip { font-weight: 700; font-size: 28px; color: #0D2142; background: #F5C400; border-radius: 999px; padding: 8px 20px; }
+.stat { margin-top: 26px; }
+.stat .num { font-weight: 900; font-size: 96px; line-height: 1; color: #F5C400; font-variant-numeric: tabular-nums; }
+.stat .lbl { margin-top: 6px; font-weight: 700; font-size: 28px; color: #D8E1F0; }
+.steps { margin-top: 28px; display: flex; flex-direction: column; gap: 0; }
+.step { display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 32px; height: 62px; }
+.step .n { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #F5C400; color: #F5C400;
+  display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+.step.last .n { background: #F5C400; color: #0D2142; }
+
+  </style>
+  <div id="root" data-composition-id="jobs" data-width="1920" data-height="1080">
+    <div id="jobs-card" class="card">
+      <div class="kicker">Tidak memilih pekerjaan</div>
+      <div id="jobs-title" class="title"><span class="w">Bermula</span><span class="w">dari</span><span class="w">bawah</span></div>
+      <div class="items">
+        <div id="jobs-i0" class="item"><span class="dot"></span>Pengawal keselamatan</div>
+        <div id="jobs-i1" class="item"><span class="dot"></span>Pekerja kilang</div>
+        <div id="jobs-i2" class="item"><span class="dot"></span>Batu Pahat, Johor</div>
+      </div>
+      <div id="jobs-stat" class="stat"><div id="jobs-num" class="num">0</div><div class="lbl">permohonan menyertai pasukan polis</div></div>
+      <div class="subrow"><span id="jobs-chip" class="chip">Antara yang terpilih</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#jobs-card", { opacity: 0, x: -40, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0);
+    tl.to("#jobs-card", { opacity: 0, x: -24, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 16.42);
+    tl.fromTo("#jobs-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.07 }, 0.18);
+    tl.fromTo("#jobs-i0", { opacity: 0, x: -18, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 0.70);
+    tl.fromTo("#jobs-i1", { opacity: 0, x: -18, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 3.80);
+    tl.fromTo("#jobs-i2", { opacity: 0, x: -18, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 4.60);
+    tl.fromTo("#jobs-stat", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 10.00);
+    const jobsN = { v: 0 }; const jobsEl = document.getElementById("jobs-num");
+    tl.fromTo(jobsN, { v: 0 }, { v: 26000, duration: 1.2, ease: "power3.out", onUpdate: () => { jobsEl.textContent = Math.round(jobsN.v).toLocaleString("en-US"); } }, 10.00);
+    tl.fromTo("#jobs-chip", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.4)" }, 15.40);
+
+    window.__timelines["jobs"] = tl;
+  </script>
+</template>
