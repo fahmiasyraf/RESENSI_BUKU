@@ -1,0 +1,1 @@
+hqdn3d=1.2:1.2:2.5:2.5,eq=contrast=1.05:brightness=0.025:saturation=1.08:gamma=1.04,colorbalance=rs=0.04:gs=0.012:bs=-0.03:rm=0.03:gm=0.008:bm=-0.035:rh=0.015:gh=0.005:bh=-0.02,unsharp=5:5:0.35:5:5:0,vignette=angle=PI/7:mode=forward
