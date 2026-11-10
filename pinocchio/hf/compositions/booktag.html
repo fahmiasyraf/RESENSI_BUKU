@@ -1,0 +1,38 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="booktag" data-width="1920" data-height="1080">
+<div id="tg-box" style="position:absolute;left:64px;top:50px;height:52px;width:300px;opacity:0">
+  <div style="position:absolute;inset:0;border-radius:26px;background:linear-gradient(90deg,rgba(9,22,60,.72),rgba(9,22,60,.0));"></div>
+  <div style="position:absolute;left:22px;top:20px;width:11px;height:11px;background:#f2d48b;transform:rotate(45deg);box-shadow:0 0 10px rgba(255,214,120,.9)"></div>
+  <div class="serif" style="position:absolute;left:48px;top:9px;font-size:27px;font-weight:700;letter-spacing:.24em;color:#f2d48b;text-shadow:0 0 22px rgba(255,212,128,.45),0 2px 6px rgba(0,0,0,.5);">PINOCCHIO</div>
+</div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#tg-box",{opacity:0,x:-16},{opacity:.9,x:0,duration:.8,ease:"power2.out"},0);
+tl.to("#tg-box",{opacity:.75,duration:233.80,ease:"none"},.9);
+tl.to("#tg-box",{opacity:0,duration:.5},235.20);
+window.__timelines["booktag"] = tl;
+</script>
+</template>

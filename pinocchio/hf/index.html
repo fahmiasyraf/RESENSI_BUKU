@@ -1,61 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
-    <style>
-      /* Placeholders: replace all three with the film's own palette and display face. */
-      :root {
-        --ground: #000;
-        --ink: #ffffff;
-        --font-display: sans-serif;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        width: 1920px;
-        height: 1080px;
-        overflow: hidden;
-        background: var(--ground);
-      }
-      #root {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-display);
-      }
-      #title {
-        color: var(--ink);
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="10"
-      data-width="1920"
-      data-height="1080"
-    >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
-    </div>
-    <script>
-      const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0);
-      window.__timelines["main"] = tl;
-      tl.seek(0);
-    </script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:transparent;}
+#root{position:absolute;inset:0;}
+.still{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:contain;}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="248.48" data-width="1920" data-height="1080">
+<img id="first-frame" class="clip still" src="assets/footage/first.jpg" data-start="4.80" data-duration="1.2" data-track-index="0" style="z-index:1" data-hidden />
+<video id="perf" class="clip" src="assets/footage/performance.mp4" data-start="6.0" data-duration="237.48" data-track-index="1" muted playsinline style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:contain;z-index:2" data-hidden></video>
+<img id="last-frame" class="clip still" src="assets/footage/last.jpg" data-start="243.480" data-duration="5.0" data-track-index="0" style="z-index:3" data-hidden />
+<audio id="mix" class="clip" src="assets/audio/mix.wav" data-start="0" data-duration="248.48" data-track-index="20" data-volume="1" data-hidden></audio>
+<div id="opening" data-composition-id="opening" data-composition-src="compositions/opening.html" data-start="0" data-duration="6.6" data-track-index="10" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:10"></div>
+<div id="booktag" data-composition-id="booktag" data-composition-src="compositions/booktag.html" data-start="7.0" data-duration="235.8" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:11"></div>
+<div id="nameplate" data-composition-id="nameplate" data-composition-src="compositions/nameplate.html" data-start="10.2" data-duration="6.999999999999999" data-track-index="3" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:12"></div>
+<div id="book1" data-composition-id="book1" data-composition-src="compositions/book1.html" data-start="20.6" data-duration="52.2" data-track-index="4" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:13"></div>
+<div id="book2" data-composition-id="book2" data-composition-src="compositions/book2.html" data-start="91.5" data-duration="21.4" data-track-index="5" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:14"></div>
+<div id="book3" data-composition-id="book3" data-composition-src="compositions/book3.html" data-start="140.1" data-duration="4.1" data-track-index="4" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:15"></div>
+<div id="book4" data-composition-id="book4" data-composition-src="compositions/book4.html" data-start="201.0" data-duration="16.7" data-track-index="5" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:16"></div>
+<div id="moral" data-composition-id="moral" data-composition-src="compositions/moral.html" data-start="218.1" data-duration="21.9" data-track-index="6" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:17"></div>
+<div id="closing" data-composition-id="closing" data-composition-src="compositions/closing.html" data-start="243.48" data-duration="5.0" data-track-index="10" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:18"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+window.__timelines["main"] = gsap.timeline({paused:true});
+</script>
+</body>
 </html>

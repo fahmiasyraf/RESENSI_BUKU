@@ -1,0 +1,71 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="book3" data-width="1920" data-height="1080">
+<div id="book3-fr" class="frame">
+  <div class="mat"></div>
+  <div class="pages"><div id="book3-p0" class="page" style="z-index:1"><div class="parch" style="position:absolute;inset:0"></div><div style="position:absolute;left:60px;right:60px;bottom:34px;height:22px;border-radius:50%;background:radial-gradient(ellipse,rgba(120,80,30,.35),rgba(120,80,30,0) 70%)"></div><img id="book3-p0-img" src="assets/img/pinocchio.png" style="position:absolute;left:131px;top:22px;height:316px" /><div id="book3-p0-sh" class="shade"></div></div></div>
+  <div class="corner" style="left:-3px;top:-3px;border-top-width:2px;border-left-width:2px;border-bottom-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;top:-3px;border-top-width:2px;border-right-width:2px;border-bottom-width:0;border-left-width:0;"></div><div class="corner" style="left:-3px;bottom:-3px;border-bottom-width:2px;border-left-width:2px;border-top-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;bottom:-3px;border-bottom-width:2px;border-right-width:2px;border-top-width:0;border-left-width:0;"></div>
+</div>
+<div id="book3-in-0" class="spark" style="left:1751px;top:955px"></div>
+<div id="book3-in-1" class="spark" style="left:1849px;top:711px"></div>
+<div id="book3-in-2" class="spark" style="left:1705px;top:752px"></div>
+<div id="book3-in-3" class="spark" style="left:1744px;top:688px"></div>
+<div id="book3-in-4" class="spark" style="left:1833px;top:668px"></div>
+<div id="book3-in-5" class="spark" style="left:1433px;top:884px"></div>
+<div id="book3-in-6" class="spark" style="left:1524px;top:848px"></div>
+<div id="book3-in-7" class="spark" style="left:1872px;top:694px"></div>
+<div id="book3-in-8" class="spark" style="left:1736px;top:642px"></div>
+<div id="book3-in-9" class="spark" style="left:1559px;top:802px"></div>
+<div id="book3-in-10" class="spark" style="left:1833px;top:655px"></div>
+<div id="book3-in-11" class="spark" style="left:1487px;top:876px"></div>
+<div id="book3-in-12" class="spark" style="left:1483px;top:700px"></div>
+<div id="book3-in-13" class="spark" style="left:1855px;top:940px"></div>
+<div id="book3-in-14" class="spark" style="left:1676px;top:696px"></div>
+<div id="book3-in-15" class="spark" style="left:1666px;top:811px"></div>
+
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#book3-fr",{opacity:0,y:28,scale:.93,rotationX:8},{opacity:1,y:0,scale:1,rotationX:0,duration:.75,ease:"power2.out"},0);
+tl.fromTo("#book3-in-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.25,x:8,y:-12,duration:.45,ease:"power2.out"},0.59);tl.to("#book3-in-0",{opacity:0,x:19,y:-31,duration:1.1,ease:"power1.in"},1.04);
+tl.fromTo("#book3-in-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.63,x:11,y:-19,duration:.45,ease:"power2.out"},0.44);tl.to("#book3-in-1",{opacity:0,x:28,y:-47,duration:1.1,ease:"power1.in"},0.89);
+tl.fromTo("#book3-in-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.19,x:-1,y:-22,duration:.45,ease:"power2.out"},0.30);tl.to("#book3-in-2",{opacity:0,x:-1,y:-54,duration:1.1,ease:"power1.in"},0.75);
+tl.fromTo("#book3-in-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.75,x:4,y:-21,duration:.45,ease:"power2.out"},0.44);tl.to("#book3-in-3",{opacity:0,x:11,y:-53,duration:1.1,ease:"power1.in"},0.89);
+tl.fromTo("#book3-in-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.11,x:2,y:-26,duration:.45,ease:"power2.out"},0.59);tl.to("#book3-in-4",{opacity:0,x:5,y:-64,duration:1.1,ease:"power1.in"},1.04);
+tl.fromTo("#book3-in-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.10,x:-7,y:-25,duration:.45,ease:"power2.out"},0.20);tl.to("#book3-in-5",{opacity:0,x:-18,y:-63,duration:1.1,ease:"power1.in"},0.65);
+tl.fromTo("#book3-in-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.23,x:15,y:-20,duration:.45,ease:"power2.out"},0.45);tl.to("#book3-in-6",{opacity:0,x:38,y:-49,duration:1.1,ease:"power1.in"},0.90);
+tl.fromTo("#book3-in-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.91,x:-7,y:-23,duration:.45,ease:"power2.out"},0.43);tl.to("#book3-in-7",{opacity:0,x:-18,y:-59,duration:1.1,ease:"power1.in"},0.88);
+tl.fromTo("#book3-in-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:-11,y:-10,duration:.45,ease:"power2.out"},0.54);tl.to("#book3-in-8",{opacity:0,x:-27,y:-25,duration:1.1,ease:"power1.in"},0.99);
+tl.fromTo("#book3-in-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.27,x:10,y:-21,duration:.45,ease:"power2.out"},0.55);tl.to("#book3-in-9",{opacity:0,x:24,y:-52,duration:1.1,ease:"power1.in"},1.00);
+tl.fromTo("#book3-in-10",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.12,x:-14,y:-20,duration:.45,ease:"power2.out"},0.53);tl.to("#book3-in-10",{opacity:0,x:-35,y:-50,duration:1.1,ease:"power1.in"},0.98);
+tl.fromTo("#book3-in-11",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.14,x:-3,y:-25,duration:.45,ease:"power2.out"},0.39);tl.to("#book3-in-11",{opacity:0,x:-7,y:-64,duration:1.1,ease:"power1.in"},0.84);
+tl.fromTo("#book3-in-12",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.04,x:12,y:-20,duration:.45,ease:"power2.out"},0.52);tl.to("#book3-in-12",{opacity:0,x:29,y:-50,duration:1.1,ease:"power1.in"},0.97);
+tl.fromTo("#book3-in-13",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.82,x:-2,y:-25,duration:.45,ease:"power2.out"},0.54);tl.to("#book3-in-13",{opacity:0,x:-5,y:-63,duration:1.1,ease:"power1.in"},0.99);
+tl.fromTo("#book3-in-14",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:-3,y:-22,duration:.45,ease:"power2.out"},0.14);tl.to("#book3-in-14",{opacity:0,x:-8,y:-56,duration:1.1,ease:"power1.in"},0.59);
+tl.fromTo("#book3-in-15",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.14,x:-11,y:-28,duration:.45,ease:"power2.out"},0.48);tl.to("#book3-in-15",{opacity:0,x:-28,y:-70,duration:1.1,ease:"power1.in"},0.93);
+tl.fromTo("#book3-p0-img",{x:90},{x:-90,duration:5.10,ease:"none"},0.00);tl.fromTo("#book3-p0-img",{y:0,rotation:-2},{y:-12,rotation:2,duration:.25,ease:"sine.inOut",yoyo:true,repeat:19},0.00);
+tl.to("#book3-fr",{opacity:0,y:16,scale:.96,duration:.5,ease:"power2.in"},3.55);
+window.__timelines["book3"] = tl;
+</script>
+</template>

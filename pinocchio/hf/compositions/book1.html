@@ -1,0 +1,143 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="book1" data-width="1920" data-height="1080">
+<div id="book1-fr" class="frame">
+  <div class="mat"></div>
+  <div class="pages"><div id="book1-p0" class="page" style="z-index:5"><div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#22489a,#0b1a45 75%)"><div style="position:absolute;left:57px;top:263px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.73"></div><div style="position:absolute;left:398px;top:246px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.75"></div><div style="position:absolute;left:75px;top:215px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.77"></div><div style="position:absolute;left:353px;top:325px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.68"></div><div style="position:absolute;left:263px;top:33px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.39"></div><div style="position:absolute;left:179px;top:41px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.45"></div><div style="position:absolute;left:132px;top:162px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.62"></div><div style="position:absolute;left:212px;top:132px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.35"></div><div style="position:absolute;left:294px;top:48px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.62"></div><div style="position:absolute;left:88px;top:69px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.32"></div><div style="position:absolute;left:220px;top:241px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.35"></div><div style="position:absolute;left:19px;top:336px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.52"></div><div style="position:absolute;left:363px;top:119px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.71"></div><div style="position:absolute;left:436px;top:51px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.40"></div><div style="position:absolute;left:73px;top:236px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.54"></div><div style="position:absolute;left:433px;top:213px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.66"></div><div style="position:absolute;left:290px;top:111px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.69"></div><div style="position:absolute;left:118px;top:335px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.56"></div><div style="position:absolute;left:125px;top:67px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.45"></div><div style="position:absolute;left:210px;top:191px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.40"></div><div style="position:absolute;left:159px;top:103px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.35"></div><div style="position:absolute;left:336px;top:89px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.57"></div><div style="position:absolute;left:143px;top:83px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.61"></div><div style="position:absolute;left:243px;top:197px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.40"></div><div style="position:absolute;left:439px;top:339px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.65"></div><div style="position:absolute;left:440px;top:195px;width:3px;height:3px;border-radius:50%;background:#ffe9b0;opacity:0.31"></div></div><div id="book1-p0-book" style="position:absolute;left:118px;top:14px;width:246px;height:328px;perspective:900px;"><img id="book1-p0-img" src="assets/img/book-cover.webp" style="position:absolute;inset:0;width:100%;height:100%;border-radius:4px 8px 8px 4px;box-shadow:-6px 8px 18px rgba(0,0,0,.5),inset 6px 0 8px rgba(0,0,0,.25);transform-origin:0% 50%" /><div id="book1-p0-gl" class="glint"></div></div><div id="book1-p0-sh" class="shade"></div></div><div id="book1-p1" class="page" style="z-index:4"><img id="book1-p1-img" class="fill" src="assets/img/workshop.jpg" style="object-position:50% 40%" /><div id="book1-p1-sh" class="shade"></div></div><div id="book1-p2" class="page" style="z-index:3"><img id="book1-p2-img" class="fill" src="assets/img/fairy.jpg" style="object-position:72% 40%" /><div id="book1-p2-sh" class="shade"></div></div><div id="book1-p3" class="page" style="z-index:2"><img id="book1-p3-img" class="fill" src="assets/img/workshop.jpg" style="object-position:60% 35%" /><div id="book1-p3-sh" class="shade"></div></div><div id="book1-p4" class="page" style="z-index:1"><div class="parch" style="position:absolute;inset:0"></div><div style="position:absolute;left:60px;right:60px;bottom:34px;height:22px;border-radius:50%;background:radial-gradient(ellipse,rgba(120,80,30,.35),rgba(120,80,30,0) 70%)"></div><img id="book1-p4-img" src="assets/img/pinocchio.png" style="position:absolute;left:131px;top:22px;height:316px" /><div id="book1-p4-sh" class="shade"></div></div></div>
+  <div class="corner" style="left:-3px;top:-3px;border-top-width:2px;border-left-width:2px;border-bottom-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;top:-3px;border-top-width:2px;border-right-width:2px;border-bottom-width:0;border-left-width:0;"></div><div class="corner" style="left:-3px;bottom:-3px;border-bottom-width:2px;border-left-width:2px;border-top-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;bottom:-3px;border-bottom-width:2px;border-right-width:2px;border-top-width:0;border-left-width:0;"></div>
+</div>
+<div id="book1-in-0" class="spark" style="left:1833px;top:598px"></div>
+<div id="book1-in-1" class="spark" style="left:1760px;top:837px"></div>
+<div id="book1-in-2" class="spark" style="left:1769px;top:900px"></div>
+<div id="book1-in-3" class="spark" style="left:1572px;top:686px"></div>
+<div id="book1-in-4" class="spark" style="left:1537px;top:774px"></div>
+<div id="book1-in-5" class="spark" style="left:1778px;top:828px"></div>
+<div id="book1-in-6" class="spark" style="left:1366px;top:751px"></div>
+<div id="book1-in-7" class="spark" style="left:1877px;top:977px"></div>
+<div id="book1-in-8" class="spark" style="left:1526px;top:634px"></div>
+<div id="book1-in-9" class="spark" style="left:1533px;top:966px"></div>
+<div id="book1-in-10" class="spark" style="left:1909px;top:882px"></div>
+<div id="book1-in-11" class="spark" style="left:1461px;top:932px"></div>
+<div id="book1-in-12" class="spark" style="left:1593px;top:685px"></div>
+<div id="book1-in-13" class="spark" style="left:1689px;top:891px"></div>
+<div id="book1-in-14" class="spark" style="left:1631px;top:803px"></div>
+<div id="book1-in-15" class="spark" style="left:1704px;top:795px"></div>
+<div id="book1-s0-0" class="spark" style="left:1719px;top:664px"></div>
+<div id="book1-s0-1" class="spark" style="left:1431px;top:673px"></div>
+<div id="book1-s0-2" class="spark" style="left:1505px;top:643px"></div>
+<div id="book1-s0-3" class="spark" style="left:1763px;top:676px"></div>
+<div id="book1-s0-4" class="spark" style="left:1732px;top:622px"></div>
+<div id="book1-s0-5" class="spark" style="left:1796px;top:631px"></div>
+<div id="book1-s0-6" class="spark" style="left:1454px;top:662px"></div>
+<div id="book1-s0-7" class="spark" style="left:1772px;top:602px"></div>
+<div id="book1-s0-8" class="spark" style="left:1590px;top:620px"></div>
+<div id="book1-s0-9" class="spark" style="left:1782px;top:658px"></div><div id="book1-s1-0" class="spark" style="left:1559px;top:676px"></div>
+<div id="book1-s1-1" class="spark" style="left:1836px;top:632px"></div>
+<div id="book1-s1-2" class="spark" style="left:1442px;top:680px"></div>
+<div id="book1-s1-3" class="spark" style="left:1845px;top:616px"></div>
+<div id="book1-s1-4" class="spark" style="left:1785px;top:674px"></div>
+<div id="book1-s1-5" class="spark" style="left:1828px;top:683px"></div>
+<div id="book1-s1-6" class="spark" style="left:1718px;top:680px"></div>
+<div id="book1-s1-7" class="spark" style="left:1571px;top:641px"></div>
+<div id="book1-s1-8" class="spark" style="left:1446px;top:593px"></div>
+<div id="book1-s1-9" class="spark" style="left:1614px;top:616px"></div><div id="book1-s2-0" class="spark" style="left:1613px;top:639px"></div>
+<div id="book1-s2-1" class="spark" style="left:1615px;top:617px"></div>
+<div id="book1-s2-2" class="spark" style="left:1830px;top:606px"></div>
+<div id="book1-s2-3" class="spark" style="left:1820px;top:676px"></div>
+<div id="book1-s2-4" class="spark" style="left:1655px;top:610px"></div>
+<div id="book1-s2-5" class="spark" style="left:1799px;top:682px"></div>
+<div id="book1-s2-6" class="spark" style="left:1870px;top:664px"></div>
+<div id="book1-s2-7" class="spark" style="left:1735px;top:613px"></div>
+<div id="book1-s2-8" class="spark" style="left:1792px;top:638px"></div>
+<div id="book1-s2-9" class="spark" style="left:1476px;top:609px"></div><div id="book1-s3-0" class="spark" style="left:1850px;top:593px"></div>
+<div id="book1-s3-1" class="spark" style="left:1599px;top:643px"></div>
+<div id="book1-s3-2" class="spark" style="left:1757px;top:589px"></div>
+<div id="book1-s3-3" class="spark" style="left:1850px;top:644px"></div>
+<div id="book1-s3-4" class="spark" style="left:1779px;top:677px"></div>
+<div id="book1-s3-5" class="spark" style="left:1804px;top:649px"></div>
+<div id="book1-s3-6" class="spark" style="left:1776px;top:597px"></div>
+<div id="book1-s3-7" class="spark" style="left:1748px;top:658px"></div>
+<div id="book1-s3-8" class="spark" style="left:1517px;top:606px"></div>
+<div id="book1-s3-9" class="spark" style="left:1549px;top:647px"></div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#book1-fr",{opacity:0,y:28,scale:.93,rotationX:8},{opacity:1,y:0,scale:1,rotationX:0,duration:.75,ease:"power2.out"},0);
+tl.fromTo("#book1-in-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.06,x:-12,y:-25,duration:.45,ease:"power2.out"},0.42);tl.to("#book1-in-0",{opacity:0,x:-31,y:-62,duration:1.1,ease:"power1.in"},0.87);
+tl.fromTo("#book1-in-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.26,x:-14,y:-20,duration:.45,ease:"power2.out"},0.45);tl.to("#book1-in-1",{opacity:0,x:-36,y:-51,duration:1.1,ease:"power1.in"},0.90);
+tl.fromTo("#book1-in-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.01,x:8,y:-19,duration:.45,ease:"power2.out"},0.43);tl.to("#book1-in-2",{opacity:0,x:21,y:-48,duration:1.1,ease:"power1.in"},0.88);
+tl.fromTo("#book1-in-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.96,x:-0,y:-16,duration:.45,ease:"power2.out"},0.40);tl.to("#book1-in-3",{opacity:0,x:-0,y:-40,duration:1.1,ease:"power1.in"},0.85);
+tl.fromTo("#book1-in-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.70,x:6,y:-15,duration:.45,ease:"power2.out"},0.58);tl.to("#book1-in-4",{opacity:0,x:16,y:-38,duration:1.1,ease:"power1.in"},1.03);
+tl.fromTo("#book1-in-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.39,x:-12,y:-15,duration:.45,ease:"power2.out"},0.36);tl.to("#book1-in-5",{opacity:0,x:-29,y:-36,duration:1.1,ease:"power1.in"},0.81);
+tl.fromTo("#book1-in-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.98,x:1,y:-26,duration:.45,ease:"power2.out"},0.38);tl.to("#book1-in-6",{opacity:0,x:2,y:-66,duration:1.1,ease:"power1.in"},0.83);
+tl.fromTo("#book1-in-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.09,x:6,y:-15,duration:.45,ease:"power2.out"},0.59);tl.to("#book1-in-7",{opacity:0,x:14,y:-38,duration:1.1,ease:"power1.in"},1.04);
+tl.fromTo("#book1-in-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.78,x:11,y:-20,duration:.45,ease:"power2.out"},0.14);tl.to("#book1-in-8",{opacity:0,x:28,y:-51,duration:1.1,ease:"power1.in"},0.59);
+tl.fromTo("#book1-in-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.07,x:14,y:-24,duration:.45,ease:"power2.out"},0.18);tl.to("#book1-in-9",{opacity:0,x:34,y:-60,duration:1.1,ease:"power1.in"},0.63);
+tl.fromTo("#book1-in-10",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.34,x:2,y:-12,duration:.45,ease:"power2.out"},0.54);tl.to("#book1-in-10",{opacity:0,x:5,y:-29,duration:1.1,ease:"power1.in"},0.99);
+tl.fromTo("#book1-in-11",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.64,x:14,y:-24,duration:.45,ease:"power2.out"},0.29);tl.to("#book1-in-11",{opacity:0,x:35,y:-60,duration:1.1,ease:"power1.in"},0.74);
+tl.fromTo("#book1-in-12",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.92,x:9,y:-14,duration:.45,ease:"power2.out"},0.34);tl.to("#book1-in-12",{opacity:0,x:23,y:-34,duration:1.1,ease:"power1.in"},0.79);
+tl.fromTo("#book1-in-13",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.75,x:-1,y:-19,duration:.45,ease:"power2.out"},0.41);tl.to("#book1-in-13",{opacity:0,x:-2,y:-48,duration:1.1,ease:"power1.in"},0.86);
+tl.fromTo("#book1-in-14",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.36,x:-3,y:-27,duration:.45,ease:"power2.out"},0.24);tl.to("#book1-in-14",{opacity:0,x:-6,y:-68,duration:1.1,ease:"power1.in"},0.69);
+tl.fromTo("#book1-in-15",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.12,x:8,y:-19,duration:.45,ease:"power2.out"},0.38);tl.to("#book1-in-15",{opacity:0,x:19,y:-47,duration:1.1,ease:"power1.in"},0.83);
+tl.fromTo("#book1-p0-img",{rotationY:-24,scale:.9},{rotationY:0,scale:1,duration:1.2,ease:"power2.out"},0.00);tl.fromTo("#book1-p0-gl",{opacity:0,x:0},{opacity:1,x:520,duration:1.3,ease:"power1.inOut"},1.10);tl.to("#book1-p0-gl",{opacity:0,duration:.2},2.45);tl.fromTo("#book1-p0-book",{scale:1},{scale:1.05,duration:5.80,ease:"none"},0.00);tl.fromTo("#book1-p0",{rotationY:0,opacity:1},{rotationY:-96,duration:.95,ease:"power2.inOut"},4.35);tl.to("#book1-p0",{opacity:0,duration:.2},5.10);tl.fromTo("#book1-p0-sh",{opacity:0},{opacity:.6,duration:.9,ease:"power1.in"},4.35);tl.fromTo("#book1-s0-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.78,x:-12,y:-19,duration:.45,ease:"power2.out"},4.86);tl.to("#book1-s0-0",{opacity:0,x:-29,y:-48,duration:1.1,ease:"power1.in"},5.31);
+tl.fromTo("#book1-s0-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.07,x:-7,y:-12,duration:.45,ease:"power2.out"},4.88);tl.to("#book1-s0-1",{opacity:0,x:-19,y:-30,duration:1.1,ease:"power1.in"},5.33);
+tl.fromTo("#book1-s0-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.66,x:1,y:-27,duration:.45,ease:"power2.out"},5.11);tl.to("#book1-s0-2",{opacity:0,x:4,y:-67,duration:1.1,ease:"power1.in"},5.56);
+tl.fromTo("#book1-s0-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.54,x:-5,y:-25,duration:.45,ease:"power2.out"},5.12);tl.to("#book1-s0-3",{opacity:0,x:-13,y:-63,duration:1.1,ease:"power1.in"},5.57);
+tl.fromTo("#book1-s0-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.97,x:8,y:-21,duration:.45,ease:"power2.out"},4.73);tl.to("#book1-s0-4",{opacity:0,x:21,y:-54,duration:1.1,ease:"power1.in"},5.18);
+tl.fromTo("#book1-s0-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.26,x:-3,y:-14,duration:.45,ease:"power2.out"},5.11);tl.to("#book1-s0-5",{opacity:0,x:-8,y:-35,duration:1.1,ease:"power1.in"},5.56);
+tl.fromTo("#book1-s0-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.00,x:11,y:-12,duration:.45,ease:"power2.out"},4.96);tl.to("#book1-s0-6",{opacity:0,x:28,y:-29,duration:1.1,ease:"power1.in"},5.41);
+tl.fromTo("#book1-s0-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.63,x:-3,y:-27,duration:.45,ease:"power2.out"},4.91);tl.to("#book1-s0-7",{opacity:0,x:-7,y:-69,duration:1.1,ease:"power1.in"},5.36);
+tl.fromTo("#book1-s0-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.58,x:-12,y:-24,duration:.45,ease:"power2.out"},5.12);tl.to("#book1-s0-8",{opacity:0,x:-29,y:-59,duration:1.1,ease:"power1.in"},5.57);
+tl.fromTo("#book1-s0-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.61,x:9,y:-21,duration:.45,ease:"power2.out"},4.90);tl.to("#book1-s0-9",{opacity:0,x:23,y:-52,duration:1.1,ease:"power1.in"},5.35);tl.fromTo("#book1-p1-img",{scale:1.02,xPercent:0,yPercent:0},{scale:1.12,xPercent:-3,yPercent:0,duration:15.30,ease:"none"},4.80);tl.fromTo("#book1-p1",{rotationY:0,opacity:1},{rotationY:-96,duration:.95,ease:"power2.inOut"},18.65);tl.to("#book1-p1",{opacity:0,duration:.2},19.40);tl.fromTo("#book1-p1-sh",{opacity:0},{opacity:.6,duration:.9,ease:"power1.in"},18.65);tl.fromTo("#book1-s1-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.74,x:13,y:-18,duration:.45,ease:"power2.out"},19.15);tl.to("#book1-s1-0",{opacity:0,x:33,y:-45,duration:1.1,ease:"power1.in"},19.60);
+tl.fromTo("#book1-s1-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.62,x:13,y:-16,duration:.45,ease:"power2.out"},19.36);tl.to("#book1-s1-1",{opacity:0,x:32,y:-39,duration:1.1,ease:"power1.in"},19.81);
+tl.fromTo("#book1-s1-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.56,x:-5,y:-19,duration:.45,ease:"power2.out"},19.16);tl.to("#book1-s1-2",{opacity:0,x:-14,y:-47,duration:1.1,ease:"power1.in"},19.61);
+tl.fromTo("#book1-s1-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.77,x:4,y:-20,duration:.45,ease:"power2.out"},19.14);tl.to("#book1-s1-3",{opacity:0,x:9,y:-51,duration:1.1,ease:"power1.in"},19.59);
+tl.fromTo("#book1-s1-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.71,x:12,y:-24,duration:.45,ease:"power2.out"},19.37);tl.to("#book1-s1-4",{opacity:0,x:30,y:-59,duration:1.1,ease:"power1.in"},19.82);
+tl.fromTo("#book1-s1-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.93,x:-1,y:-26,duration:.45,ease:"power2.out"},19.40);tl.to("#book1-s1-5",{opacity:0,x:-2,y:-65,duration:1.1,ease:"power1.in"},19.85);
+tl.fromTo("#book1-s1-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.17,x:12,y:-10,duration:.45,ease:"power2.out"},19.32);tl.to("#book1-s1-6",{opacity:0,x:30,y:-25,duration:1.1,ease:"power1.in"},19.77);
+tl.fromTo("#book1-s1-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.84,x:2,y:-25,duration:.45,ease:"power2.out"},19.27);tl.to("#book1-s1-7",{opacity:0,x:5,y:-63,duration:1.1,ease:"power1.in"},19.72);
+tl.fromTo("#book1-s1-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.95,x:1,y:-26,duration:.45,ease:"power2.out"},19.39);tl.to("#book1-s1-8",{opacity:0,x:2,y:-64,duration:1.1,ease:"power1.in"},19.84);
+tl.fromTo("#book1-s1-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.86,x:7,y:-28,duration:.45,ease:"power2.out"},19.04);tl.to("#book1-s1-9",{opacity:0,x:18,y:-69,duration:1.1,ease:"power1.in"},19.49);tl.fromTo("#book1-p2-img",{scale:1.05,xPercent:0,yPercent:0},{scale:1.18,xPercent:-4,yPercent:0,duration:16.60,ease:"none"},19.10);tl.fromTo("#book1-p2",{rotationY:0,opacity:1},{rotationY:-96,duration:.95,ease:"power2.inOut"},34.25);tl.to("#book1-p2",{opacity:0,duration:.2},35.00);tl.fromTo("#book1-p2-sh",{opacity:0},{opacity:.6,duration:.9,ease:"power1.in"},34.25);tl.fromTo("#book1-s2-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:-11,y:-16,duration:.45,ease:"power2.out"},34.67);tl.to("#book1-s2-0",{opacity:0,x:-29,y:-39,duration:1.1,ease:"power1.in"},35.12);
+tl.fromTo("#book1-s2-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.10,x:-6,y:-25,duration:.45,ease:"power2.out"},34.94);tl.to("#book1-s2-1",{opacity:0,x:-14,y:-64,duration:1.1,ease:"power1.in"},35.39);
+tl.fromTo("#book1-s2-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.77,x:11,y:-16,duration:.45,ease:"power2.out"},34.58);tl.to("#book1-s2-2",{opacity:0,x:29,y:-39,duration:1.1,ease:"power1.in"},35.03);
+tl.fromTo("#book1-s2-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.94,x:-15,y:-17,duration:.45,ease:"power2.out"},34.90);tl.to("#book1-s2-3",{opacity:0,x:-39,y:-41,duration:1.1,ease:"power1.in"},35.35);
+tl.fromTo("#book1-s2-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:14,y:-10,duration:.45,ease:"power2.out"},34.88);tl.to("#book1-s2-4",{opacity:0,x:36,y:-26,duration:1.1,ease:"power1.in"},35.33);
+tl.fromTo("#book1-s2-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.78,x:-7,y:-20,duration:.45,ease:"power2.out"},34.99);tl.to("#book1-s2-5",{opacity:0,x:-18,y:-51,duration:1.1,ease:"power1.in"},35.44);
+tl.fromTo("#book1-s2-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.63,x:-3,y:-25,duration:.45,ease:"power2.out"},34.98);tl.to("#book1-s2-6",{opacity:0,x:-7,y:-62,duration:1.1,ease:"power1.in"},35.43);
+tl.fromTo("#book1-s2-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.74,x:7,y:-19,duration:.45,ease:"power2.out"},34.70);tl.to("#book1-s2-7",{opacity:0,x:18,y:-47,duration:1.1,ease:"power1.in"},35.15);
+tl.fromTo("#book1-s2-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.18,x:-12,y:-19,duration:.45,ease:"power2.out"},35.04);tl.to("#book1-s2-8",{opacity:0,x:-31,y:-47,duration:1.1,ease:"power1.in"},35.49);
+tl.fromTo("#book1-s2-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.59,x:-12,y:-16,duration:.45,ease:"power2.out"},34.78);tl.to("#book1-s2-9",{opacity:0,x:-29,y:-40,duration:1.1,ease:"power1.in"},35.23);tl.fromTo("#book1-p3-img",{scale:1.15,xPercent:-4,yPercent:0},{scale:1.03,xPercent:0,yPercent:0,duration:12.00,ease:"none"},34.70);tl.fromTo("#book1-p3",{rotationY:0,opacity:1},{rotationY:-96,duration:.95,ease:"power2.inOut"},45.25);tl.to("#book1-p3",{opacity:0,duration:.2},46.00);tl.fromTo("#book1-p3-sh",{opacity:0},{opacity:.6,duration:.9,ease:"power1.in"},45.25);tl.fromTo("#book1-s3-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.93,x:13,y:-28,duration:.45,ease:"power2.out"},45.84);tl.to("#book1-s3-0",{opacity:0,x:33,y:-70,duration:1.1,ease:"power1.in"},46.29);
+tl.fromTo("#book1-s3-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.67,x:-11,y:-10,duration:.45,ease:"power2.out"},45.64);tl.to("#book1-s3-1",{opacity:0,x:-27,y:-26,duration:1.1,ease:"power1.in"},46.09);
+tl.fromTo("#book1-s3-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.99,x:9,y:-25,duration:.45,ease:"power2.out"},46.00);tl.to("#book1-s3-2",{opacity:0,x:23,y:-63,duration:1.1,ease:"power1.in"},46.45);
+tl.fromTo("#book1-s3-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.59,x:-16,y:-12,duration:.45,ease:"power2.out"},45.58);tl.to("#book1-s3-3",{opacity:0,x:-40,y:-30,duration:1.1,ease:"power1.in"},46.03);
+tl.fromTo("#book1-s3-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.75,x:-6,y:-19,duration:.45,ease:"power2.out"},45.57);tl.to("#book1-s3-4",{opacity:0,x:-14,y:-48,duration:1.1,ease:"power1.in"},46.02);
+tl.fromTo("#book1-s3-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.97,x:15,y:-15,duration:.45,ease:"power2.out"},45.82);tl.to("#book1-s3-5",{opacity:0,x:39,y:-37,duration:1.1,ease:"power1.in"},46.27);
+tl.fromTo("#book1-s3-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.72,x:-2,y:-16,duration:.45,ease:"power2.out"},45.82);tl.to("#book1-s3-6",{opacity:0,x:-5,y:-40,duration:1.1,ease:"power1.in"},46.27);
+tl.fromTo("#book1-s3-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.97,x:-8,y:-18,duration:.45,ease:"power2.out"},45.98);tl.to("#book1-s3-7",{opacity:0,x:-19,y:-46,duration:1.1,ease:"power1.in"},46.43);
+tl.fromTo("#book1-s3-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.17,x:15,y:-27,duration:.45,ease:"power2.out"},45.77);tl.to("#book1-s3-8",{opacity:0,x:38,y:-68,duration:1.1,ease:"power1.in"},46.22);
+tl.fromTo("#book1-s3-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.06,x:3,y:-13,duration:.45,ease:"power2.out"},45.80);tl.to("#book1-s3-9",{opacity:0,x:9,y:-34,duration:1.1,ease:"power1.in"},46.25);tl.fromTo("#book1-p4-img",{x:90},{x:-90,duration:7.50,ease:"none"},45.70);tl.fromTo("#book1-p4-img",{y:0,rotation:-2},{y:-12,rotation:2,duration:.25,ease:"sine.inOut",yoyo:true,repeat:29},45.70);
+tl.to("#book1-fr",{opacity:0,y:16,scale:.96,duration:.5,ease:"power2.in"},51.65);
+window.__timelines["book1"] = tl;
+</script>
+</template>

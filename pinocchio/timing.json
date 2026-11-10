@@ -1,0 +1,35 @@
+{
+  "_nota": "Masa dalam saat rakaman asal (bukan masa video). 'at' = halaman itu kelihatan penuh (selakan bermula 0.45 s lebih awal).",
+  "tag": [1.0, 236.8],
+  "nameplate": [4.2, 11.2],
+  "books": [
+    {"_cerita": "about Pinocchio -> Geppetto made puppets -> the fairy came -> Geppetto woke up, happy -> go to school",
+     "start": 14.6, "end": 66.8, "pages": [
+      {"kind": "cover", "at": 14.6},
+      {"kind": "img", "src": "workshop.jpg", "pos": "50% 40%", "zoom": [1.02, 1.12], "pan": [0, -3], "at": 19.4},
+      {"kind": "img", "src": "fairy.jpg", "pos": "72% 40%", "zoom": [1.05, 1.18], "pan": [0, -4], "at": 33.7},
+      {"kind": "img", "src": "workshop.jpg", "pos": "60% 35%", "zoom": [1.15, 1.03], "pan": [-4, 0], "at": 49.3},
+      {"kind": "walk", "at": 60.3}
+    ]},
+    {"_cerita": "Pinocchio told a lie, his nose got bigger -> the fairy waved her wand, the cage opened",
+     "start": 85.5, "end": 106.9, "pages": [
+      {"kind": "img", "src": "fairy.jpg", "pos": "35% 42%", "zoom": [1.1, 1.45], "pan": [2, 2], "at": 85.5},
+      {"kind": "img", "src": "fairy.jpg", "pos": "75% 40%", "zoom": [1.05, 1.16], "pan": [0, -3], "at": 97.6}
+    ]},
+    {"_cerita": "He ran home with Jiminy Cricket",
+     "start": 134.1, "end": 138.2, "pages": [
+      {"kind": "walk", "at": 134.1}
+    ]},
+    {"_cerita": "The fairy turned Pinocchio into a real boy -> very happy, sang and danced all night",
+     "start": 195.0, "end": 211.7, "pages": [
+      {"kind": "img", "src": "fairy.jpg", "pos": "60% 45%", "zoom": [1.02, 1.14], "pan": [-2, 0], "at": 195.0},
+      {"kind": "img", "src": "workshop.jpg", "pos": "50% 40%", "zoom": [1.04, 1.16], "pan": [2, -2], "at": 201.0}
+    ]}
+  ],
+  "moral": {"start": 212.1, "end": 234.0, "title": "Moral of the Story", "items": [
+    {"text": "We have to be honest.", "at": 217.1},
+    {"text": "Listen to good advice.", "at": 221.0},
+    {"text": "Love our family.", "at": 225.3},
+    {"text": "Learn from our mistakes.", "at": 228.9}
+  ]}
+}

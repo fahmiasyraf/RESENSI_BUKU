@@ -1,0 +1,89 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="book4" data-width="1920" data-height="1080">
+<div id="book4-fr" class="frame">
+  <div class="mat"></div>
+  <div class="pages"><div id="book4-p0" class="page" style="z-index:2"><img id="book4-p0-img" class="fill" src="assets/img/fairy.jpg" style="object-position:60% 45%" /><div id="book4-p0-sh" class="shade"></div></div><div id="book4-p1" class="page" style="z-index:1"><img id="book4-p1-img" class="fill" src="assets/img/workshop.jpg" style="object-position:50% 40%" /><div id="book4-p1-sh" class="shade"></div></div></div>
+  <div class="corner" style="left:-3px;top:-3px;border-top-width:2px;border-left-width:2px;border-bottom-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;top:-3px;border-top-width:2px;border-right-width:2px;border-bottom-width:0;border-left-width:0;"></div><div class="corner" style="left:-3px;bottom:-3px;border-bottom-width:2px;border-left-width:2px;border-top-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;bottom:-3px;border-bottom-width:2px;border-right-width:2px;border-top-width:0;border-left-width:0;"></div>
+</div>
+<div id="book4-in-0" class="spark" style="left:1722px;top:825px"></div>
+<div id="book4-in-1" class="spark" style="left:1436px;top:708px"></div>
+<div id="book4-in-2" class="spark" style="left:1464px;top:595px"></div>
+<div id="book4-in-3" class="spark" style="left:1824px;top:892px"></div>
+<div id="book4-in-4" class="spark" style="left:1681px;top:715px"></div>
+<div id="book4-in-5" class="spark" style="left:1850px;top:913px"></div>
+<div id="book4-in-6" class="spark" style="left:1790px;top:797px"></div>
+<div id="book4-in-7" class="spark" style="left:1394px;top:834px"></div>
+<div id="book4-in-8" class="spark" style="left:1895px;top:958px"></div>
+<div id="book4-in-9" class="spark" style="left:1620px;top:922px"></div>
+<div id="book4-in-10" class="spark" style="left:1868px;top:798px"></div>
+<div id="book4-in-11" class="spark" style="left:1542px;top:802px"></div>
+<div id="book4-in-12" class="spark" style="left:1621px;top:808px"></div>
+<div id="book4-in-13" class="spark" style="left:1425px;top:661px"></div>
+<div id="book4-in-14" class="spark" style="left:1421px;top:687px"></div>
+<div id="book4-in-15" class="spark" style="left:1648px;top:726px"></div>
+<div id="book4-s0-0" class="spark" style="left:1386px;top:620px"></div>
+<div id="book4-s0-1" class="spark" style="left:1400px;top:621px"></div>
+<div id="book4-s0-2" class="spark" style="left:1804px;top:611px"></div>
+<div id="book4-s0-3" class="spark" style="left:1674px;top:680px"></div>
+<div id="book4-s0-4" class="spark" style="left:1727px;top:613px"></div>
+<div id="book4-s0-5" class="spark" style="left:1834px;top:592px"></div>
+<div id="book4-s0-6" class="spark" style="left:1854px;top:635px"></div>
+<div id="book4-s0-7" class="spark" style="left:1774px;top:680px"></div>
+<div id="book4-s0-8" class="spark" style="left:1701px;top:587px"></div>
+<div id="book4-s0-9" class="spark" style="left:1525px;top:685px"></div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#book4-fr",{opacity:0,y:28,scale:.93,rotationX:8},{opacity:1,y:0,scale:1,rotationX:0,duration:.75,ease:"power2.out"},0);
+tl.fromTo("#book4-in-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.64,x:-8,y:-24,duration:.45,ease:"power2.out"},0.19);tl.to("#book4-in-0",{opacity:0,x:-19,y:-60,duration:1.1,ease:"power1.in"},0.64);
+tl.fromTo("#book4-in-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.90,x:-9,y:-22,duration:.45,ease:"power2.out"},0.18);tl.to("#book4-in-1",{opacity:0,x:-24,y:-54,duration:1.1,ease:"power1.in"},0.63);
+tl.fromTo("#book4-in-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.36,x:-3,y:-27,duration:.45,ease:"power2.out"},0.15);tl.to("#book4-in-2",{opacity:0,x:-8,y:-68,duration:1.1,ease:"power1.in"},0.60);
+tl.fromTo("#book4-in-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.07,x:-15,y:-25,duration:.45,ease:"power2.out"},0.13);tl.to("#book4-in-3",{opacity:0,x:-38,y:-62,duration:1.1,ease:"power1.in"},0.58);
+tl.fromTo("#book4-in-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.22,x:-1,y:-11,duration:.45,ease:"power2.out"},0.35);tl.to("#book4-in-4",{opacity:0,x:-2,y:-28,duration:1.1,ease:"power1.in"},0.80);
+tl.fromTo("#book4-in-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.31,x:-14,y:-21,duration:.45,ease:"power2.out"},0.56);tl.to("#book4-in-5",{opacity:0,x:-34,y:-52,duration:1.1,ease:"power1.in"},1.01);
+tl.fromTo("#book4-in-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.33,x:-16,y:-15,duration:.45,ease:"power2.out"},0.43);tl.to("#book4-in-6",{opacity:0,x:-39,y:-37,duration:1.1,ease:"power1.in"},0.88);
+tl.fromTo("#book4-in-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.94,x:-5,y:-20,duration:.45,ease:"power2.out"},0.46);tl.to("#book4-in-7",{opacity:0,x:-12,y:-50,duration:1.1,ease:"power1.in"},0.91);
+tl.fromTo("#book4-in-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.95,x:-12,y:-15,duration:.45,ease:"power2.out"},0.47);tl.to("#book4-in-8",{opacity:0,x:-30,y:-37,duration:1.1,ease:"power1.in"},0.92);
+tl.fromTo("#book4-in-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.63,x:0,y:-21,duration:.45,ease:"power2.out"},0.37);tl.to("#book4-in-9",{opacity:0,x:0,y:-53,duration:1.1,ease:"power1.in"},0.82);
+tl.fromTo("#book4-in-10",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.64,x:-2,y:-23,duration:.45,ease:"power2.out"},0.12);tl.to("#book4-in-10",{opacity:0,x:-4,y:-57,duration:1.1,ease:"power1.in"},0.57);
+tl.fromTo("#book4-in-11",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.75,x:-5,y:-23,duration:.45,ease:"power2.out"},0.41);tl.to("#book4-in-11",{opacity:0,x:-14,y:-58,duration:1.1,ease:"power1.in"},0.86);
+tl.fromTo("#book4-in-12",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.32,x:-14,y:-11,duration:.45,ease:"power2.out"},0.48);tl.to("#book4-in-12",{opacity:0,x:-36,y:-26,duration:1.1,ease:"power1.in"},0.93);
+tl.fromTo("#book4-in-13",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.69,x:14,y:-14,duration:.45,ease:"power2.out"},0.17);tl.to("#book4-in-13",{opacity:0,x:34,y:-34,duration:1.1,ease:"power1.in"},0.62);
+tl.fromTo("#book4-in-14",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.87,x:-8,y:-25,duration:.45,ease:"power2.out"},0.12);tl.to("#book4-in-14",{opacity:0,x:-19,y:-62,duration:1.1,ease:"power1.in"},0.57);
+tl.fromTo("#book4-in-15",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.99,x:-9,y:-28,duration:.45,ease:"power2.out"},0.31);tl.to("#book4-in-15",{opacity:0,x:-23,y:-69,duration:1.1,ease:"power1.in"},0.76);
+tl.fromTo("#book4-p0-img",{scale:1.02,xPercent:-2,yPercent:0},{scale:1.14,xPercent:0,yPercent:0,duration:7.00,ease:"none"},0.00);tl.fromTo("#book4-p0",{rotationY:0,opacity:1},{rotationY:-96,duration:.95,ease:"power2.inOut"},5.55);tl.to("#book4-p0",{opacity:0,duration:.2},6.30);tl.fromTo("#book4-p0-sh",{opacity:0},{opacity:.6,duration:.9,ease:"power1.in"},5.55);tl.fromTo("#book4-s0-0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.83,x:-12,y:-14,duration:.45,ease:"power2.out"},6.35);tl.to("#book4-s0-0",{opacity:0,x:-29,y:-34,duration:1.1,ease:"power1.in"},6.80);
+tl.fromTo("#book4-s0-1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.98,x:2,y:-18,duration:.45,ease:"power2.out"},5.96);tl.to("#book4-s0-1",{opacity:0,x:5,y:-45,duration:1.1,ease:"power1.in"},6.41);
+tl.fromTo("#book4-s0-2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.12,x:-10,y:-23,duration:.45,ease:"power2.out"},5.97);tl.to("#book4-s0-2",{opacity:0,x:-25,y:-57,duration:1.1,ease:"power1.in"},6.42);
+tl.fromTo("#book4-s0-3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.93,x:-14,y:-13,duration:.45,ease:"power2.out"},6.32);tl.to("#book4-s0-3",{opacity:0,x:-36,y:-31,duration:1.1,ease:"power1.in"},6.77);
+tl.fromTo("#book4-s0-4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.88,x:-15,y:-18,duration:.45,ease:"power2.out"},5.88);tl.to("#book4-s0-4",{opacity:0,x:-38,y:-45,duration:1.1,ease:"power1.in"},6.33);
+tl.fromTo("#book4-s0-5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.72,x:-4,y:-14,duration:.45,ease:"power2.out"},5.98);tl.to("#book4-s0-5",{opacity:0,x:-11,y:-35,duration:1.1,ease:"power1.in"},6.43);
+tl.fromTo("#book4-s0-6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.12,x:-6,y:-18,duration:.45,ease:"power2.out"},6.18);tl.to("#book4-s0-6",{opacity:0,x:-15,y:-46,duration:1.1,ease:"power1.in"},6.63);
+tl.fromTo("#book4-s0-7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.19,x:-1,y:-13,duration:.45,ease:"power2.out"},6.05);tl.to("#book4-s0-7",{opacity:0,x:-1,y:-32,duration:1.1,ease:"power1.in"},6.50);
+tl.fromTo("#book4-s0-8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.90,x:-11,y:-22,duration:.45,ease:"power2.out"},6.21);tl.to("#book4-s0-8",{opacity:0,x:-29,y:-55,duration:1.1,ease:"power1.in"},6.66);
+tl.fromTo("#book4-s0-9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.59,x:4,y:-20,duration:.45,ease:"power2.out"},6.01);tl.to("#book4-s0-9",{opacity:0,x:10,y:-50,duration:1.1,ease:"power1.in"},6.46);tl.fromTo("#book4-p1-img",{scale:1.04,xPercent:2,yPercent:0},{scale:1.16,xPercent:-2,yPercent:0,duration:11.70,ease:"none"},6.00);
+tl.to("#book4-fr",{opacity:0,y:16,scale:.96,duration:.5,ease:"power2.in"},16.15);
+window.__timelines["book4"] = tl;
+</script>
+</template>

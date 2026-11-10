@@ -1,0 +1,68 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="moral" data-width="1920" data-height="1080">
+<div id="mo-card" style="position:absolute;left:1360px;top:300px;width:516px;height:444px;opacity:0">
+  <div class="mat"></div>
+  <div class="corner" style="left:-3px;top:-3px;border-top-width:2px;border-left-width:2px;border-bottom-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;top:-3px;border-top-width:2px;border-right-width:2px;border-bottom-width:0;border-left-width:0;"></div><div class="corner" style="left:-3px;bottom:-3px;border-bottom-width:2px;border-left-width:2px;border-top-width:0;border-right-width:0;"></div><div class="corner" style="right:-3px;bottom:-3px;border-bottom-width:2px;border-right-width:2px;border-top-width:0;border-left-width:0;"></div>
+  <div id="mo-t" class="serif" style="position:absolute;left:0;width:516px;top:26px;text-align:center;font-size:40px;font-weight:700;color:#f2d48b;letter-spacing:.04em;text-shadow:0 0 22px rgba(255,212,128,.45),0 2px 6px rgba(0,0,0,.5);">Moral of the Story</div>
+  <div style="position:absolute;left:128px;top:84px;width:260px;height:1.5px;background:linear-gradient(90deg,rgba(226,191,104,0),#e2bf68,rgba(226,191,104,0))"></div>
+  <div id="mo-i0" style="position:absolute;left:34px;top:112px;width:456px;opacity:0"><div style="position:absolute;left:0;top:13px;width:12px;height:12px;background:#f2d48b;transform:rotate(45deg);box-shadow:0 0 10px rgba(255,214,120,.8)"></div><div class="serif" style="position:absolute;left:30px;top:0;width:416px;font-size:31px;line-height:1.15;font-weight:700;color:#fff6dc">We have to be honest.</div></div><div id="mo-i1" style="position:absolute;left:34px;top:190px;width:456px;opacity:0"><div style="position:absolute;left:0;top:13px;width:12px;height:12px;background:#f2d48b;transform:rotate(45deg);box-shadow:0 0 10px rgba(255,214,120,.8)"></div><div class="serif" style="position:absolute;left:30px;top:0;width:416px;font-size:31px;line-height:1.15;font-weight:700;color:#fff6dc">Listen to good advice.</div></div><div id="mo-i2" style="position:absolute;left:34px;top:268px;width:456px;opacity:0"><div style="position:absolute;left:0;top:13px;width:12px;height:12px;background:#f2d48b;transform:rotate(45deg);box-shadow:0 0 10px rgba(255,214,120,.8)"></div><div class="serif" style="position:absolute;left:30px;top:0;width:416px;font-size:31px;line-height:1.15;font-weight:700;color:#fff6dc">Love our family.</div></div><div id="mo-i3" style="position:absolute;left:34px;top:346px;width:456px;opacity:0"><div style="position:absolute;left:0;top:13px;width:12px;height:12px;background:#f2d48b;transform:rotate(45deg);box-shadow:0 0 10px rgba(255,214,120,.8)"></div><div class="serif" style="position:absolute;left:30px;top:0;width:416px;font-size:31px;line-height:1.15;font-weight:700;color:#fff6dc">Learn from our mistakes.</div></div>
+</div>
+<div id="mo-sp0" class="spark" style="left:1856px;top:319px"></div>
+<div id="mo-sp1" class="spark" style="left:1397px;top:340px"></div>
+<div id="mo-sp2" class="spark" style="left:1846px;top:365px"></div>
+<div id="mo-sp3" class="spark" style="left:1473px;top:323px"></div>
+<div id="mo-sp4" class="spark" style="left:1600px;top:339px"></div>
+<div id="mo-sp5" class="spark" style="left:1854px;top:378px"></div>
+<div id="mo-sp6" class="spark" style="left:1721px;top:368px"></div>
+<div id="mo-sp7" class="spark" style="left:1755px;top:314px"></div>
+<div id="mo-sp8" class="spark" style="left:1538px;top:350px"></div>
+<div id="mo-sp9" class="spark" style="left:1730px;top:370px"></div>
+<div id="mo-sp10" class="spark" style="left:1553px;top:349px"></div>
+<div id="mo-sp11" class="spark" style="left:1625px;top:333px"></div>
+<div id="mo-sp12" class="spark" style="left:1851px;top:306px"></div>
+<div id="mo-sp13" class="spark" style="left:1574px;top:318px"></div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#mo-card",{opacity:0,y:26,scale:.94},{opacity:1,y:0,scale:1,duration:.75,ease:"power2.out"},0);
+tl.fromTo("#mo-sp0",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.30,x:-13,y:-20,duration:.45,ease:"power2.out"},0.58);tl.to("#mo-sp0",{opacity:0,x:-31,y:-50,duration:1.1,ease:"power1.in"},1.03);
+tl.fromTo("#mo-sp1",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.65,x:-14,y:-12,duration:.45,ease:"power2.out"},0.69);tl.to("#mo-sp1",{opacity:0,x:-36,y:-31,duration:1.1,ease:"power1.in"},1.14);
+tl.fromTo("#mo-sp2",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.36,x:-10,y:-22,duration:.45,ease:"power2.out"},0.66);tl.to("#mo-sp2",{opacity:0,x:-26,y:-55,duration:1.1,ease:"power1.in"},1.11);
+tl.fromTo("#mo-sp3",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.15,x:-3,y:-17,duration:.45,ease:"power2.out"},0.22);tl.to("#mo-sp3",{opacity:0,x:-7,y:-42,duration:1.1,ease:"power1.in"},0.67);
+tl.fromTo("#mo-sp4",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.85,x:-13,y:-16,duration:.45,ease:"power2.out"},0.47);tl.to("#mo-sp4",{opacity:0,x:-33,y:-41,duration:1.1,ease:"power1.in"},0.92);
+tl.fromTo("#mo-sp5",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.25,x:2,y:-10,duration:.45,ease:"power2.out"},0.39);tl.to("#mo-sp5",{opacity:0,x:5,y:-25,duration:1.1,ease:"power1.in"},0.84);
+tl.fromTo("#mo-sp6",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.77,x:14,y:-16,duration:.45,ease:"power2.out"},0.30);tl.to("#mo-sp6",{opacity:0,x:36,y:-40,duration:1.1,ease:"power1.in"},0.75);
+tl.fromTo("#mo-sp7",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.81,x:3,y:-27,duration:.45,ease:"power2.out"},0.34);tl.to("#mo-sp7",{opacity:0,x:6,y:-68,duration:1.1,ease:"power1.in"},0.79);
+tl.fromTo("#mo-sp8",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:-6,y:-28,duration:.45,ease:"power2.out"},0.23);tl.to("#mo-sp8",{opacity:0,x:-15,y:-70,duration:1.1,ease:"power1.in"},0.68);
+tl.fromTo("#mo-sp9",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.81,x:9,y:-24,duration:.45,ease:"power2.out"},0.24);tl.to("#mo-sp9",{opacity:0,x:22,y:-61,duration:1.1,ease:"power1.in"},0.69);
+tl.fromTo("#mo-sp10",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.68,x:-7,y:-26,duration:.45,ease:"power2.out"},0.26);tl.to("#mo-sp10",{opacity:0,x:-18,y:-64,duration:1.1,ease:"power1.in"},0.71);
+tl.fromTo("#mo-sp11",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.30,x:-0,y:-26,duration:.45,ease:"power2.out"},0.26);tl.to("#mo-sp11",{opacity:0,x:-1,y:-65,duration:1.1,ease:"power1.in"},0.71);
+tl.fromTo("#mo-sp12",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:0.76,x:5,y:-24,duration:.45,ease:"power2.out"},0.44);tl.to("#mo-sp12",{opacity:0,x:12,y:-60,duration:1.1,ease:"power1.in"},0.89);
+tl.fromTo("#mo-sp13",{opacity:0,scale:.2,x:0,y:0},{opacity:1,scale:1.07,x:4,y:-21,duration:.45,ease:"power2.out"},0.37);tl.to("#mo-sp13",{opacity:0,x:11,y:-53,duration:1.1,ease:"power1.in"},0.82);
+tl.fromTo("#mo-i0",{opacity:0,x:22},{opacity:1,x:0,duration:.6,ease:"power2.out"},5.00);tl.fromTo("#mo-i1",{opacity:0,x:22},{opacity:1,x:0,duration:.6,ease:"power2.out"},8.90);tl.fromTo("#mo-i2",{opacity:0,x:22},{opacity:1,x:0,duration:.6,ease:"power2.out"},13.20);tl.fromTo("#mo-i3",{opacity:0,x:22},{opacity:1,x:0,duration:.6,ease:"power2.out"},16.80);
+tl.to("#mo-card",{opacity:0,y:14,duration:.5,ease:"power2.in"},21.35);
+window.__timelines["moral"] = tl;
+</script>
+</template>
