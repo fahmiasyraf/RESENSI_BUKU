@@ -464,7 +464,7 @@ def build_final(overlay_path, out):
           f"[base][ov]overlay=0:0:format=auto:shortest=0,format=yuv420p[vout]")
     cmd = ["ffmpeg", "-v", "error", "-stats", "-y", "-i", SRC, "-i", overlay_path, "-i", os.path.join(HERE, "work", "mix.wav"),
            "-filter_complex", fc, "-map", "[vout]", "-map", "2:a",
-           "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", "60",
+           "-c:v", "libx264", "-preset", "medium", "-crf", os.environ.get("CRF", "17"), "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", "60",
            "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", "-t", str(TOTAL), out]
     subprocess.run(cmd, check=True)
     print("final ok", out)
