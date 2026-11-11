@@ -851,7 +851,8 @@ def final(back_mov, front_mov, out):
     fc = (
         f"[0:v]{g_novig},fps=60,{pad},trim=0:{TOTAL},setpts=PTS-STARTPTS[base];"
         f"[1:v]fps=60,format=yuva444p,setpts=PTS-STARTPTS[back];"
-        f"[2:v]format=yuva444p,{g_novig.replace('hqdn3d=1.2:1.2:2.5:2.5,','')},fps=60,{pad.replace('clone','black')},trim=0:{TOTAL},setpts=PTS-STARTPTS,split=3[c0][c1][c2];"
+        f"[2:v]fps=60,format=rgba,split=2[cr][cal];[cr]format=yuv444p,{g_novig.replace('hqdn3d=1.2:1.2:2.5:2.5,','')}[crg];[cal]alphaextract[ca];"
+        f"[crg][ca]alphamerge,format=yuva444p,tpad=start_duration={T0}:start_mode=add:color=black@0:stop_duration={CLOSE+0.5}:stop_mode=add:color=black@0,trim=0:{TOTAL},setpts=PTS-STARTPTS,split=3[c0][c1][c2];"
         # alfa: buang sisa kecil & lembutkan
         f"[c1]format=rgba,alphaextract,dilation,dilation,dilation,dilation,dilation,dilation,dilation,gblur=sigma=1.2,lut=y='if(gt(val,90),255,0)',gblur=sigma=0.8[olA];"
         f"color=c=white:s=1920x1080:r=60:d={TOTAL}[ow];[ow][olA]alphamerge[outline];"
