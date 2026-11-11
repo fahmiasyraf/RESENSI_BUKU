@@ -866,7 +866,8 @@ def final(back_mov, front_mov, out):
         f"[3:v]fps=60,format=yuva444p,setpts=PTS-STARTPTS[front];"
         f"[b4][front]overlay=0:0:format=auto,vignette=angle=PI/7:mode=forward,format=yuv420p[vout]"
     )
-    cmd = ["ffmpeg", "-v", "error", "-stats", "-y", "-i", SRC, "-i", back_mov, "-c:v", "libvpx-vp9", "-i", CUT, "-i", front_mov,
+    dec = lambda f: (["-c:v", "libvpx-vp9"] if f.endswith(".webm") else []) + ["-i", f]
+    cmd = ["ffmpeg", "-v", "error", "-stats", "-y", "-i", SRC, *dec(back_mov), "-c:v", "libvpx-vp9", "-i", CUT, *dec(front_mov),
            "-i", os.path.join(HERE, "work", "mix.wav"),
            "-filter_complex", fc, "-map", "[vout]", "-map", "4:a",
            "-c:v", "libx264", "-preset", "medium", "-crf", crf, "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", "60",

@@ -34,9 +34,9 @@ function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(func
   gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
 
 tl.fromTo("#scene",{xPercent:100,rotation:3},{xPercent:0,rotation:0,duration:.6,ease:"steps(8)"},0);
-tl.fromTo("#w-morning-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},5.20);tl.to("#w-morning-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},8.80);boil("#w-morning-h0i",2.2,1.1,56,5.20,9.30);
-tl.fromTo("#w-morning-h1",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},7.30);tl.to("#w-morning-h1",{opacity:0,y:40,duration:.45,ease:"power2.in"},9.70);boil("#w-morning-h1i",2.2,1.1,71,7.30,10.20);
-tl.fromTo("#w-morning-h2",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},8.70);tl.to("#w-morning-h2",{opacity:0,y:40,duration:.45,ease:"power2.in"},10.30);boil("#w-morning-h2i",2.2,1.1,3,8.70,10.80);tl.fromTo("#mo-ph",{opacity:0,y:-60,rotation:-17},{opacity:1,y:0,rotation:-3,duration:.6,ease:"back.out(1.7)"},0.50);tl.to("#mo-ph",{opacity:0,y:30,duration:.4,ease:"power2.in"},9.20);tl.fromTo("#rays",{opacity:.12},{opacity:.28,duration:1,ease:"steps(4)",yoyo:true,repeat:9},0);
+tl.fromTo("#w-morning-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},5.20);tl.to("#w-morning-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},8.80);boil("#w-morning-h0i",2.2,1.1,62,5.20,9.30);
+tl.fromTo("#w-morning-h1",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},7.30);tl.to("#w-morning-h1",{opacity:0,y:40,duration:.45,ease:"power2.in"},9.70);boil("#w-morning-h1i",2.2,1.1,73,7.30,10.20);
+tl.fromTo("#w-morning-h2",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},8.70);tl.to("#w-morning-h2",{opacity:0,y:40,duration:.45,ease:"power2.in"},10.30);boil("#w-morning-h2i",2.2,1.1,94,8.70,10.80);tl.fromTo("#mo-ph",{opacity:0,y:-60,rotation:-17},{opacity:1,y:0,rotation:-3,duration:.6,ease:"back.out(1.7)"},0.50);tl.to("#mo-ph",{opacity:0,y:30,duration:.4,ease:"power2.in"},9.20);tl.fromTo("#rays",{opacity:.12},{opacity:.28,duration:1,ease:"steps(4)",yoyo:true,repeat:9},0);
 tl.set({},{},10.09);
 window.__timelines["w-morning"] = tl;
 </script>

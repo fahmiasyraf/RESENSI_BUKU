@@ -34,9 +34,9 @@ function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(func
   gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
 
 tl.fromTo("#scene",{opacity:0},{opacity:1,duration:.45},0);
-tl.fromTo("#w-theater2-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},1.60);tl.to("#w-theater2-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},4.00);boil("#w-theater2-h0i",2.2,1.1,2,1.60,4.50);
-tl.fromTo("#w-theater2-h1",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},4.50);tl.to("#w-theater2-h1",{opacity:0,y:-30,duration:.5,ease:"power2.in"},7.70);boil("#w-theater2-h1i",2.2,1.1,29,4.50,8.20);
-tl.fromTo("#w-theater2-h2",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},8.40);tl.to("#w-theater2-h2",{opacity:0,y:40,duration:.45,ease:"power2.in"},10.20);boil("#w-theater2-h2i",2.2,1.1,93,8.40,10.70);tl.fromTo("#t2-ph",{opacity:0,y:-60,rotation:-18},{opacity:1,y:0,rotation:-4,duration:.6,ease:"back.out(1.7)"},0.60);tl.to("#t2-ph",{opacity:0,y:30,duration:.4,ease:"power2.in"},9.70);tl.fromTo(".bulb",{opacity:1},{opacity:.4,duration:.4,ease:"steps(2)",yoyo:true,repeat:25,stagger:{each:.1}},0);tl.fromTo(".pup",{rotation:-4,svgOrigin:"960 120"},{rotation:4,duration:.8,ease:"steps(4)",yoyo:true,repeat:13},0);
+tl.fromTo("#w-theater2-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},1.60);tl.to("#w-theater2-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},4.00);boil("#w-theater2-h0i",2.2,1.1,30,1.60,4.50);
+tl.fromTo("#w-theater2-h1",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},4.50);tl.to("#w-theater2-h1",{opacity:0,y:-30,duration:.5,ease:"power2.in"},7.70);boil("#w-theater2-h1i",2.2,1.1,27,4.50,8.20);
+tl.fromTo("#w-theater2-h2",{opacity:0,y:-260},{opacity:1,y:0,duration:.55,ease:"bounce.out"},8.40);tl.to("#w-theater2-h2",{opacity:0,y:40,duration:.45,ease:"power2.in"},10.20);boil("#w-theater2-h2i",2.2,1.1,68,8.40,10.70);tl.fromTo("#t2-ph",{opacity:0,y:-60,rotation:-18},{opacity:1,y:0,rotation:-4,duration:.6,ease:"back.out(1.7)"},0.60);tl.to("#t2-ph",{opacity:0,y:30,duration:.4,ease:"power2.in"},9.70);tl.fromTo(".bulb",{opacity:1},{opacity:.4,duration:.4,ease:"steps(2)",yoyo:true,repeat:25,stagger:{each:.1}},0);tl.fromTo(".pup",{rotation:-4,svgOrigin:"960 120"},{rotation:4,duration:.8,ease:"steps(4)",yoyo:true,repeat:13},0);
 tl.set({},{},10.59);
 window.__timelines["w-theater2"] = tl;
 </script>

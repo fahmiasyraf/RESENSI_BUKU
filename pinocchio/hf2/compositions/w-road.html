@@ -32,7 +32,7 @@ function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(func
   gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
 
 tl.fromTo("#scene",{xPercent:100,rotation:3},{xPercent:0,rotation:0,duration:.6,ease:"steps(8)"},0);
-tl.fromTo("#w-road-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},2.90);tl.to("#w-road-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},7.30);boil("#w-road-h0i",2.2,1.1,59,2.90,7.80);tl.fromTo(".cloud",{x:0},{x:180,duration:9,ease:"steps(30)"},0);tl.fromTo("#walker",{x:0},{x:-1250,duration:8.2,ease:"steps(40)"},0.2);tl.fromTo("#walker",{y:0},{y:-14,duration:.25,ease:"steps(2)",yoyo:true,repeat:31},0.2);
+tl.fromTo("#w-road-h0",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},2.90);tl.to("#w-road-h0",{opacity:0,y:-30,duration:.5,ease:"power2.in"},7.30);boil("#w-road-h0i",2.2,1.1,15,2.90,7.80);tl.fromTo(".cloud",{x:0},{x:180,duration:9,ease:"steps(30)"},0);tl.fromTo("#walker",{x:0},{x:-1250,duration:8.2,ease:"steps(40)"},0.2);tl.fromTo("#walker",{y:0},{y:-14,duration:.25,ease:"steps(2)",yoyo:true,repeat:31},0.2);
 tl.set({},{},8.69);
 window.__timelines["w-road"] = tl;
 </script>

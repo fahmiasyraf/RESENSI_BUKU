@@ -25,7 +25,7 @@ function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(func
   if(t<t0||t>t1)return;var st=Math.floor(t*30/3);for(var i=0;i<els.length;i++){
   gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
 
-tl.fromTo("#f-real-t",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},0.00);tl.to("#f-real-t",{opacity:0,y:-30,duration:.5,ease:"power2.in"},1.60);boil("#f-real-ti",2.2,1.1,11,0.00,2.10);
+tl.fromTo("#f-real-t",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:.32,ease:"back.out(2.2)"},0.00);tl.to("#f-real-t",{opacity:0,y:-30,duration:.5,ease:"power2.in"},1.60);boil("#f-real-ti",2.2,1.1,93,0.00,2.10);
 window.__timelines["f-real"] = tl;
 </script>
 </template>
