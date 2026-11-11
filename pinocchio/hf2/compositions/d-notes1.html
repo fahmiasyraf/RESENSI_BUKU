@@ -1,0 +1,44 @@
+<template>
+<style>@font-face{font-family:'Caveat';src:url('assets/fonts/Caveat-700-latin.woff2') format('woff2');font-weight:700;font-display:block;}
+#root{position:absolute;inset:0;overflow:hidden;}
+.L{position:absolute;inset:0;}
+.L svg{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible;}
+.hl{position:absolute;font-family:'Archivo Black',sans-serif;line-height:1;white-space:nowrap;
+  letter-spacing:.01em;opacity:0;}
+.hand{font-family:'Caveat',cursive;font-weight:700;}
+.tape{position:absolute;width:110px;height:34px;background:rgba(255,246,214,.78);
+  box-shadow:0 2px 4px rgba(0,0,0,.18);}
+.photo{position:absolute;background:#fffaf0;padding:14px 14px 46px 14px;
+  box-shadow:6px 9px 0 rgba(40,25,10,.28);opacity:0;}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;}
+.grain{position:absolute;inset:0;width:1920px;height:1080px;mix-blend-mode:multiply;opacity:.55;}
+
+#d-notes1-pos{position:absolute;left:0;top:0;width:320px;height:200px;margin-left:-160px;}
+#d-notes1-pos path{fill:none;stroke:#fff6e0;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;}
+#d-notes1-pos .ink{stroke:#2b1606;stroke-width:17;}
+</style>
+<div id="root" data-composition-id="d-notes1" data-width="1920" data-height="1080">
+<div id="d-notes1-pos"><div id="d-notes1-w" style="position:absolute;inset:0;opacity:0"><div id="d-notes1-b" style="position:absolute;inset:0">
+<svg viewBox="0 0 320 200" style="position:absolute;inset:0;width:320px;height:200px;overflow:visible"><path class="ink" d="M40 160 L40 40 L120 20 L120 140"/><path d="M40 160 L40 40 L120 20 L120 140"/><path class="ink" d="M20 160 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path d="M20 160 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path class="ink" d="M100 140 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path d="M100 140 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path class="ink" d="M260 120 L260 20"/><path d="M260 120 L260 20"/><path class="ink" d="M240 120 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path d="M240 120 a20 15 0 1 0 40 0 a20 15 0 1 0 -40 0"/><path class="ink" d="M260 20 Q300 40 290 80"/><path d="M260 20 Q300 40 290 80"/></svg>
+</div></div></div>
+
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+
+var __renders=[];
+function onUpd(fn){__renders.push(fn);}
+tl.eventCallback("onUpdate",function(){for(var i=0;i<__renders.length;i++)__renders[i]();});
+function hh(n,s){var x=Math.sin(n*127.1+(s||1)*311.7)*43758.5453;return (x-Math.floor(x))*2-1;}
+function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(function(){var t=tl.time();
+  if(t<t0||t>t1)return;var st=Math.floor(t*30/3);for(var i=0;i<els.length;i++){
+  gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
+
+
+tl.fromTo("#d-notes1-w",{opacity:0,scale:.4},{opacity:1,scale:1,duration:.35,ease:"back.out(2.4)"},0);
+boil("#d-notes1-b",2.6,1.2,48,0,3.2);
+tl.set("#d-notes1-pos",{x:1450,y:300},0);
+tl.to("#d-notes1-w",{opacity:0,duration:.3},2.85);
+window.__timelines["d-notes1"] = tl;
+</script>
+</template>

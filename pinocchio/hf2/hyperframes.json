@@ -1,0 +1,45 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "registry": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+  "paths": {
+    "blocks": "compositions",
+    "components": "compositions/components",
+    "assets": "assets"
+  },
+  "media": {
+    "autoProxy": true
+  },
+  "authoringSkill": "hyperframes",
+  "registryItems": [
+    {
+      "name": "hw-boil",
+      "type": "hyperframes:component",
+      "target": "compositions/components/hw-boil.html"
+    },
+    {
+      "name": "torn-paper-rip",
+      "type": "hyperframes:component",
+      "target": "compositions/components/torn-paper-rip.html"
+    },
+    {
+      "name": "stop-motion-cadence",
+      "type": "hyperframes:component",
+      "target": "compositions/components/stop-motion-cadence.html"
+    },
+    {
+      "name": "headline-slam",
+      "type": "hyperframes:component",
+      "target": "compositions/components/headline-slam.html"
+    },
+    {
+      "name": "mk-clone-wall-transition",
+      "type": "hyperframes:block",
+      "target": "compositions/mk-clone-wall-transition.html"
+    },
+    {
+      "name": "freeze-frame-dressing",
+      "type": "hyperframes:block",
+      "target": "compositions/freeze-frame-dressing.html"
+    }
+  ]
+}

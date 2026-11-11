@@ -1,0 +1,21 @@
+<template><style>
+#root{position:absolute;inset:0;overflow:hidden;}
+.L{position:absolute;inset:0;}
+.L svg{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible;}
+.hl{position:absolute;font-family:'Archivo Black',sans-serif;line-height:1;white-space:nowrap;
+  letter-spacing:.01em;opacity:0;}
+.hand{font-family:'Caveat',cursive;font-weight:700;}
+.tape{position:absolute;width:110px;height:34px;background:rgba(255,246,214,.78);
+  box-shadow:0 2px 4px rgba(0,0,0,.18);}
+.photo{position:absolute;background:#fffaf0;padding:14px 14px 46px 14px;
+  box-shadow:6px 9px 0 rgba(40,25,10,.28);opacity:0;}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;}
+.grain{position:absolute;inset:0;width:1920px;height:1080px;mix-blend-mode:multiply;opacity:.55;}
+</style>
+<div id="root" data-composition-id="f-wave1" data-width="1920" data-height="1080">
+<div id="f-wave1-g" class="L" style="opacity:0"><svg viewBox="0 0 1920 1080"><path d="M-60 1120 L-60 985 Q53 957 167 985 Q280 955 393 985 Q507 949 620 985 Q733 956 847 985 Q960 945 1073 985 Q1187 946 1300 985 Q1413 948 1527 985 Q1640 951 1753 985 Q1867 947 1980 985 L1980 1120 Z" fill="#1a0f05" opacity="0.28" transform="translate(4,-8)"/><path d="M-60 1120 L-60 985 Q53 957 167 985 Q280 955 393 985 Q507 949 620 985 Q733 956 847 985 Q960 945 1073 985 Q1187 946 1300 985 Q1413 948 1527 985 Q1640 951 1753 985 Q1867 947 1980 985 L1980 1120 Z" fill="#2c77b8" /></svg></div></div>
+<script>const tl = gsap.timeline({paused:true});
+tl.fromTo("#f-wave1-g",{opacity:0,y:120},{opacity:1,y:0,duration:.5,ease:"steps(4)"},0);
+tl.fromTo("#f-wave1-g",{x:0},{x:-60,duration:.5,ease:"steps(3)",yoyo:true,repeat:4},.5);
+tl.to("#f-wave1-g",{opacity:0,y:120,duration:.4,ease:"steps(3)"},2.55);
+window.__timelines["f-wave1"] = tl;</script></template>

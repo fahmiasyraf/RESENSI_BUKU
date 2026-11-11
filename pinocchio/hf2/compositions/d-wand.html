@@ -1,0 +1,44 @@
+<template>
+<style>@font-face{font-family:'Caveat';src:url('assets/fonts/Caveat-700-latin.woff2') format('woff2');font-weight:700;font-display:block;}
+#root{position:absolute;inset:0;overflow:hidden;}
+.L{position:absolute;inset:0;}
+.L svg{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible;}
+.hl{position:absolute;font-family:'Archivo Black',sans-serif;line-height:1;white-space:nowrap;
+  letter-spacing:.01em;opacity:0;}
+.hand{font-family:'Caveat',cursive;font-weight:700;}
+.tape{position:absolute;width:110px;height:34px;background:rgba(255,246,214,.78);
+  box-shadow:0 2px 4px rgba(0,0,0,.18);}
+.photo{position:absolute;background:#fffaf0;padding:14px 14px 46px 14px;
+  box-shadow:6px 9px 0 rgba(40,25,10,.28);opacity:0;}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;}
+.grain{position:absolute;inset:0;width:1920px;height:1080px;mix-blend-mode:multiply;opacity:.55;}
+
+#d-wand-pos{position:absolute;left:0;top:0;width:260px;height:280px;margin-left:-130px;}
+#d-wand-pos path{fill:none;stroke:#fff6e0;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;}
+#d-wand-pos .ink{stroke:#2b1606;stroke-width:17;}
+</style>
+<div id="root" data-composition-id="d-wand" data-width="1920" data-height="1080">
+<div id="d-wand-pos"><div id="d-wand-w" style="position:absolute;inset:0;opacity:0"><div id="d-wand-b" style="position:absolute;inset:0">
+<svg viewBox="0 0 260 280" style="position:absolute;inset:0;width:260px;height:280px;overflow:visible"><path class="ink" d="M60 30 L60 90 M30 60 L90 60 M42 42 L78 78 M42 78 L78 42"/><path d="M60 30 L60 90 M30 60 L90 60 M42 42 L78 78 M42 78 L78 42"/><path class="ink" d="M200 110 L200 170 M170 140 L230 140 M182 122 L218 158 M182 158 L218 122"/><path d="M200 110 L200 170 M170 140 L230 140 M182 122 L218 158 M182 158 L218 122"/><path class="ink" d="M110 200 L110 260 M80 230 L140 230 M92 212 L128 248 M92 248 L128 212"/><path d="M110 200 L110 260 M80 230 L140 230 M92 212 L128 248 M92 248 L128 212"/></svg>
+</div></div></div>
+
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+
+var __renders=[];
+function onUpd(fn){__renders.push(fn);}
+tl.eventCallback("onUpdate",function(){for(var i=0;i<__renders.length;i++)__renders[i]();});
+function hh(n,s){var x=Math.sin(n*127.1+(s||1)*311.7)*43758.5453;return (x-Math.floor(x))*2-1;}
+function boil(sel,amp,rot,seed,t0,t1){var els=gsap.utils.toArray(sel);onUpd(function(){var t=tl.time();
+  if(t<t0||t>t1)return;var st=Math.floor(t*30/3);for(var i=0;i<els.length;i++){
+  gsap.set(els[i],{x:hh(st*3+i*97,seed)*amp,y:hh(st*3+1+i*97,seed)*amp,rotation:hh(st*3+2+i*97,seed)*rot});}});}
+
+
+tl.fromTo("#d-wand-w",{opacity:0,scale:.4},{opacity:1,scale:1,duration:.35,ease:"back.out(2.4)"},0);
+boil("#d-wand-b",2.6,1.2,23,0,2.8);
+
+tl.to("#d-wand-w",{opacity:0,duration:.3},2.45);
+window.__timelines["d-wand"] = tl;
+</script>
+</template>

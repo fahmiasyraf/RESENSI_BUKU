@@ -1,0 +1,41 @@
+<template>
+<style>
+#root{position:absolute;inset:0;}
+.serif{font-family:'Playfair Display',serif;}
+.garamond{font-family:'EB Garamond',serif;}
+.gold{color:#f2d48b;}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;
+  background:#fff1bf;
+  box-shadow:0 0 8px 3px rgba(255,214,120,.6);opacity:0;}
+.frame{position:absolute;left:1384px;top:596px;width:508px;height:382px;opacity:0;}
+.mat{position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,#173273 0%,#0b1a45 100%);
+  box-shadow:0 0 0 2px #e2bf68,0 0 0 6px rgba(9,20,52,.9),0 0 0 7.5px rgba(226,191,104,.65),
+   0 0 42px 8px rgba(255,205,110,.32),0 20px 44px rgba(0,0,0,.45);}
+.pages{position:absolute;left:13px;top:13px;right:13px;bottom:13px;perspective:1600px;}
+.page{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:0% 50%;background:#0b1838;}
+.page img.fill{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.0),rgba(0,0,0,.55));opacity:0;}
+.glint{position:absolute;top:-20%;left:-60%;width:40%;height:140%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,240,200,.38),rgba(255,255,255,0));opacity:0;}
+.parch{background:radial-gradient(ellipse at 50% 40%,#fbf0d2 0%,#f0dcaa 60%,#d9bd82 100%);}
+.corner{position:absolute;width:26px;height:26px;border-color:#e2bf68;border-style:solid;opacity:.9;}
+</style>
+<div id="root" data-composition-id="nameplate" data-width="1920" data-height="1080">
+<div id="lt-box" style="position:absolute;left:70px;top:820px;width:560px;height:178px;opacity:0">
+  <div id="lt-bg" style="position:absolute;inset:0;border-radius:14px;background:linear-gradient(100deg,rgba(9,22,60,.86) 0%,rgba(14,34,86,.78) 70%,rgba(14,34,86,0) 100%);"></div>
+  <div id="lt-bar" style="position:absolute;left:0;top:14px;width:5px;height:150px;border-radius:3px;background:linear-gradient(#ffe7a6,#d7a64a);box-shadow:0 0 12px rgba(255,210,120,.7)"></div>
+  <div id="lt-n1" class="serif" style="position:absolute;left:30px;top:16px;font-size:44px;font-weight:900;color:#fff6dc;letter-spacing:.02em;text-shadow:0 0 22px rgba(255,212,128,.45),0 2px 6px rgba(0,0,0,.5);">FIRASH MIKAEL</div>
+  <div id="lt-n2" class="serif" style="position:absolute;left:30px;top:72px;font-size:28px;font-weight:700;color:#fff6dc;letter-spacing:.04em;">BIN MOHD FAHMI ASYRAF</div>
+  <div id="lt-sub" class="serif" style="position:absolute;left:30px;top:120px;font-size:22px;font-weight:700;color:#f2d48b;letter-spacing:.1em;">2 IBNU ABBAS &nbsp;·&nbsp; SK TOK JIRING</div>
+</div>
+</div>
+<script>
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#lt-box",{opacity:0,x:-30},{opacity:1,x:0,duration:.6,ease:"power2.out"},0);
+tl.fromTo("#lt-bar",{scaleY:0},{scaleY:1,duration:.6,ease:"power2.out"},.1);
+tl.fromTo(["#lt-n1","#lt-n2","#lt-sub"],{opacity:0,x:-14},{opacity:1,x:0,duration:.5,stagger:.12,ease:"power2.out"},.25);
+tl.to("#lt-box",{opacity:0,x:-20,duration:.45,ease:"power2.in"},6.50);
+window.__timelines["nameplate"] = tl;
+</script>
+</template>
