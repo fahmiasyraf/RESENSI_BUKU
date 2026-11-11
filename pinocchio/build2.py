@@ -131,7 +131,7 @@ def jagged_v(x, amp, seed):
 def headline(hid, text, x, y, size, color, rot, t, hold, tl="tl", edge="#2b1606", outline="#fff6e0", kind="slam", anchor="left"):
     """perkataan 'headline storm': slam masuk, getar kecil (boil), kemudian hanyut & pudar."""
     tx = "translateX(-50%)" if anchor == "center" else ""
-    side = f"right:{x}px;" if anchor == "right" else f"left:{x}px;"
+    side = f"right:{x}px;text-align:right;" if anchor == "right" else f"left:{x}px;"
     st = (f"{side}top:{y}px;font-size:{size}px;color:{color};"
           f"text-shadow:-3px -3px 0 {outline},3px -3px 0 {outline},-3px 3px 0 {outline},3px 3px 0 {outline},0 4px 0 {outline},"
           f"{9}px {12}px 0 {edge};")
@@ -242,6 +242,15 @@ def words_js(sid, items, p0):
         txt, p, x, y, size, col, rot, hold = it[:8]
         kind = it[8] if len(it) > 8 else "slam"
         anc = "left"
+        # hadkan lebar supaya tidak masuk ke ruang badan murid (~x 700–1220)
+        longest = len(txt)
+        if len(txt) > 11 and " " in txt:
+            w = txt.split(" ")
+            best = min(range(1, len(w)), key=lambda i: abs(len(" ".join(w[:i])) - len(" ".join(w[i:]))))
+            l1, l2 = " ".join(w[:best]), " ".join(w[best:])
+            longest = max(len(l1), len(l2))
+            txt = l1 + "<br>" + l2
+        size = min(size, int(600 / (0.74 * max(4, longest))))
         if x >= 1000:
             anc, x = "right", 70 + (k % 3) * 30
         h, j = headline(f"{sid}-h{k}", txt, x, y, size, col, rot, p - p0, hold, kind=kind, anchor=anc)
@@ -803,17 +812,23 @@ def track():
     last = (960, 260, 200)
     for i in range(n):
         m = A[i] > 128
-        rows = np.where(m.sum(1) > 3)[0]
-        if len(rows) == 0:
+        top = None
+        # baris pertama dengan larian piksel berterusan >= 28 (=112 px penuh): topi/kepala, bukan tangan
+        for r in range(0, h - 40):
+            row = m[r]
+            if row.sum() < 20:
+                continue
+            d = np.diff(np.concatenate(([0], row.astype(np.int8), [0])))
+            st, en = np.where(d == 1)[0], np.where(d == -1)[0]
+            k = np.argmax(en - st)
+            if en[k] - st[k] >= 28:
+                top = r; c0, c1 = st[k], en[k]
+                break
+        if top is None:
             cx, top, hh_ = last
         else:
-            top = rows[0]
-            band = m[top: top + 40]  # kepala + topi (~160 px skala penuh)
-            cols = np.where(band.sum(0) > 2)[0]
-            cx = (cols.min() + cols.max()) / 2 if len(cols) else last[0] / 4
-            # lebar kepala sebagai anggaran saiz
-            hh_ = (cols.max() - cols.min()) if len(cols) else last[2] / 4
-            cx, top, hh_ = cx * 4, top * 4, hh_ * 4
+            cx, hh_ = (c0 + c1) / 2 * 4, (c1 - c0) * 4
+            top = top * 4
         T.append(i / hz); CX.append(float(cx)); TOP.append(float(top)); HH.append(float(hh_))
         last = (cx, top, hh_)
     # licinkan (median 5)
