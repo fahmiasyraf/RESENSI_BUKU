@@ -716,10 +716,10 @@ def front_scenes():
     nj = 'tl.fromTo("#nose-grow",{scaleX:.25,transformOrigin:"0% 50%"},{scaleX:.55,duration:.3,ease:"steps(2)"},0.6);' \
          'tl.to("#nose-grow",{scaleX:.85,duration:.3,ease:"steps(2)"},1.6);tl.to("#nose-grow",{scaleX:1.15,duration:.3,ease:"steps(2)"},2.6);'
     S.append(("d-nose", a(87.6), doodle_scene("d-nose", 87.6, 96.4, f'<g id="nose-grow">{nose}</g>', 420, 120,
-                                               follow=(150, 120), extra_js=nj)))
+                                               follow=(190, 90), extra_js=nj)))
     # telinga & ekor keldai
     ears = ink("M70 230 Q20 90 60 10 Q110 90 120 220") + ink("M240 220 Q250 90 300 10 Q340 90 290 230")
-    S.append(("d-ears", a(131.4), doodle_scene("d-ears", 131.4, 136.2, ears, 360, 260, follow=(0, -160))))
+    S.append(("d-ears", a(131.4), doodle_scene("d-ears", 131.4, 136.2, ears, 360, 260, follow=(0, -200))))
     # sangkar di sekeliling murid (bar di sisi & atas, bukan di muka)
     bars = "".join(ink(f"M{x} 40 L{x} 900") for x in (40, 110, 180, 980, 1050, 1120)) + ink("M40 40 Q580 -140 1120 40") + ink("M40 900 L1120 900")
     S.append(("d-cage", a(76.6), doodle_scene("d-cage", 76.6, 101.9, bars, 1160, 940, follow=(0, -120),
@@ -794,7 +794,7 @@ def track():
     import numpy as np
     hz = 10
     w, h = 480, 270
-    cmd = ["ffmpeg", "-v", "error", "-c:v", "libvpx-vp9", "-i", CUT, "-vf", f"fps={hz},scale={w}:{h},alphaextract,format=gray",
+    cmd = ["ffmpeg", "-v", "error", "-c:v", "libvpx-vp9", "-i", CUT, "-vf", f"fps={hz},scale={w}:{h},format=rgba,alphaextract",
            "-f", "rawvideo", "-"]
     raw = subprocess.run(cmd, check=True, capture_output=True).stdout
     n = len(raw) // (w * h)
@@ -838,9 +838,9 @@ def final(back_mov, front_mov, out):
         f"[1:v]fps=60,format=yuva444p,setpts=PTS-STARTPTS[back];"
         f"[2:v]format=yuva444p,{g_novig.replace('hqdn3d=1.2:1.2:2.5:2.5,','')},fps=60,{pad.replace('clone','black')},trim=0:{TOTAL},setpts=PTS-STARTPTS,split=3[c0][c1][c2];"
         # alfa: buang sisa kecil & lembutkan
-        f"[c1]alphaextract,dilation,dilation,dilation,dilation,dilation,dilation,dilation,gblur=sigma=1.2,lut=y='if(gt(val,90),255,0)',gblur=sigma=0.8[olA];"
+        f"[c1]format=rgba,alphaextract,dilation,dilation,dilation,dilation,dilation,dilation,dilation,gblur=sigma=1.2,lut=y='if(gt(val,90),255,0)',gblur=sigma=0.8[olA];"
         f"color=c=white:s=1920x1080:r=60:d={TOTAL}[ow];[ow][olA]alphamerge[outline];"
-        f"[c2]alphaextract,dilation,dilation,dilation,gblur=sigma=10,lut=y='val*0.45'[shA];"
+        f"[c2]format=rgba,alphaextract,dilation,dilation,dilation,gblur=sigma=10,lut=y='val*0.45'[shA];"
         f"color=c=0x1a0f05:s=1920x1080:r=60:d={TOTAL}[sc];[sc][shA]alphamerge[shadow];"
         # garis & bayang hanya semasa dunia kertas (selepas koyakan); bingkai pada 0–15.9 tanpa garis
         f"[base][back]overlay=0:0:format=auto[b1];"
